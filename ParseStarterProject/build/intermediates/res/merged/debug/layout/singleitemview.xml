@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/levellabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/levellabel"
+        android:layout_alignTop="@+id/level"
+        android:layout_toRightOf="@+id/typelabel"
+        android:layout_toEndOf="@+id/typelabel"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp" />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/levellabel" />
+
+    <TextView
+        android:id="@+id/titlelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titlelabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/type" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_toRightOf="@+id/titlelabel" />
+
+    <TextView
+        android:id="@+id/typelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/typelabel"
+        android:layout_below="@+id/titlelabel" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignRight="@+id/typelabel" />
+
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="215dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/image" />
+
+
+</RelativeLayout>
+<!-- From: file:/D:/Work%20Space/Recipes%20New/ParseStarterProject/src/main/res/layout/singleitemview.xml -->
