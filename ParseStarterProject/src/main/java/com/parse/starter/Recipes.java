@@ -1,9 +1,11 @@
 package com.parse.starter;
 
+import java.io.Serializable;
+
 /**
  * Created by Dahan on 08/05/2016.
  */
-public class Recipes {
+public class Recipes implements Serializable {
 
     public String id;
     public String title;
