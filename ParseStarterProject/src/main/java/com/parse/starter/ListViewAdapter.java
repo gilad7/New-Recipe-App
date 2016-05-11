@@ -108,10 +108,7 @@ public class ListViewAdapter extends BaseAdapter {
                 //send single item click data to SingleItemView Class
                 Intent intent = new Intent(context, SingleItemView.class);
 
-                intent.putExtra("level", recipe.getLevel());
-                intent.putExtra("title", recipe.getTitle());
-                intent.putExtra("type", recipe.getType());
-                intent.putExtra("image", recipe.getImageName());
+                intent.putExtra("recipe",  recipe);
                 //Start SingleItemView.class
                 context.startActivity(intent);
 
