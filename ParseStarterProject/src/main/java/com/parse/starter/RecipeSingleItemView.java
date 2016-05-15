@@ -1,24 +1,20 @@
 package com.parse.starter;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import com.squareup.picasso.Picasso;
 
 /**
  * Created by Dahan on 08/05/2016.
  */
-public class SingleItemView extends AppCompatActivity {
+public class RecipeSingleItemView extends AppCompatActivity {
 
     //Declare variables
-    Recipes recipe;
+    Recipe recipe;
     //ImageLoader imageLoader = new ImageLoader(this);
 
 
@@ -31,7 +27,7 @@ public class SingleItemView extends AppCompatActivity {
         setContentView(R.layout.singleitemview2try);
 
         Intent i = getIntent();
-        recipe = (Recipes) i.getSerializableExtra("recipe");
+        recipe = (Recipe) i.getSerializableExtra("recipe");
 
         //Locate textviews in singleitemview.xml
         TextView txtlevel = (TextView) findViewById(R.id.level);

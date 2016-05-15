@@ -8,16 +8,11 @@
  */
 package com.parse.starter;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.parse.ParseAnalytics;
@@ -36,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
   ListView listView;
   List<ParseObject> ob;
   ProgressDialog mProgressDialog;
-  ListViewAdapter adapter;
-  private List<Recipes> recipesList = null;
+  RecipesListView adapter;
+  private List<Recipe> recipeList = null;
 
 
   @Override
@@ -59,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
       // Create a progressdialog
       mProgressDialog = new ProgressDialog(MainActivity.this);
       // Set progressdialog title
-      mProgressDialog.setTitle("Recipes");
+      mProgressDialog.setTitle("Recipe");
       // Set progressdialog message
       mProgressDialog.setMessage("Loading...");
       mProgressDialog.setIndeterminate(false);
@@ -70,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected Void doInBackground(Void... params) {
       // Create the array
-      recipesList = new ArrayList<Recipes>();
+      recipeList = new ArrayList<Recipe>();
       try {
         // Locate the class table named "Recipe" in Parse.com
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Recipe");
@@ -81,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (ParseObject parseRecipe : ob) {
 
-          Recipes recipe = new Recipes();
+          Recipe recipe = new Recipe();
           recipe.setLevel((String) parseRecipe.get("level"));
           recipe.setTitle((String) parseRecipe.get("title"));
           recipe.setType((String) parseRecipe.get("type"));
@@ -96,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             recipe.setImageName(imageName);
           }
 
-          recipesList.add(recipe);
+          recipeList.add(recipe);
         }
       } catch (ParseException e) {
         Log.e("Error", e.getMessage());
@@ -111,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
       //locate list view in listview_main.xml
       listView = (ListView)findViewById(R.id.listview);
       //pass the results to ArrayAdapter
-      adapter = new ListViewAdapter(MainActivity.this, recipesList);
+      adapter = new RecipesListView(MainActivity.this, recipeList);
       //Bind the adapter to the listview
       listView.setAdapter(adapter);
       //close progress dialog

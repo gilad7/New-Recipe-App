@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by Dahan on 08/05/2016.
  */
-public class Recipes implements Serializable {
+public class Recipe implements Serializable {
 
     public String id;
     public String title;

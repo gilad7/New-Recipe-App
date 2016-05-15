@@ -17,20 +17,20 @@ import java.util.List;
 /**
  * Created by Dahan on 08/05/2016.
  */
-public class ListViewAdapter extends BaseAdapter {
+public class RecipesListView extends BaseAdapter {
     //Declare variables
     Context context;
     LayoutInflater inflater;
-    private List<Recipes> recipeslist = null;
-    private ArrayList<Recipes> arrayList;
+    private List<Recipe> recipeslist = null;
+    private ArrayList<Recipe> arrayList;
     //ImageLoader imageLoader;
 
-    public ListViewAdapter(Context context, List<Recipes> recipeslist){
+    public RecipesListView(Context context, List<Recipe> recipeslist){
 
         this.context = context;
         this.recipeslist = recipeslist;
         inflater = LayoutInflater.from(context);
-        this.arrayList = new ArrayList<Recipes>();
+        this.arrayList = new ArrayList<Recipe>();
         this.arrayList.addAll(recipeslist);
         //imageLoader = new ImageLoader(context);
     }
@@ -79,7 +79,7 @@ public class ListViewAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
 
-        final Recipes recipe = recipeslist.get(position);
+        final Recipe recipe = recipeslist.get(position);
         //set results in TextView
         holder.level.setText(recipe.getLevel());
         holder.title.setText(recipe.getTitle());
@@ -105,11 +105,11 @@ public class ListViewAdapter extends BaseAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //send single item click data to SingleItemView Class
-                Intent intent = new Intent(context, SingleItemView.class);
+                //send single item click data to RecipeSingleItemView Class
+                Intent intent = new Intent(context, RecipeSingleItemView.class);
 
                 intent.putExtra("recipe",  recipe);
-                //Start SingleItemView.class
+                //Start RecipeSingleItemView.class
                 context.startActivity(intent);
 
             }

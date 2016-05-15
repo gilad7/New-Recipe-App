@@ -425,7 +425,7 @@ int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c003d
 int id action_mode_bar_stub 0x7f0c003c
 int id action_mode_close_button 0x7f0c0025
-int id action_settings 0x7f0c0062
+int id action_settings 0x7f0c0063
 int id activity_chooser_view_content 0x7f0c0026
 int id alertTitle 0x7f0c0030
 int id always 0x7f0c0016
@@ -448,14 +448,15 @@ int id end 0x7f0c0014
 int id end_padder 0x7f0c0061
 int id expand_activities_button 0x7f0c0027
 int id expanded_menu 0x7f0c0037
+int id frameLayout 0x7f0c004f
 int id home 0x7f0c0004
 int id homeAsUp 0x7f0c000d
 int id icon 0x7f0c002b
 int id ifRoom 0x7f0c0018
 int id image 0x7f0c0028
 int id info 0x7f0c0060
-int id level 0x7f0c0050
-int id levellabel 0x7f0c004f
+int id level 0x7f0c0051
+int id levellabel 0x7f0c0050
 int id line1 0x7f0c005a
 int id line3 0x7f0c005e
 int id listMode 0x7f0c0009
@@ -501,7 +502,7 @@ int id textSpacerNoButtons 0x7f0c0033
 int id time 0x7f0c005b
 int id title 0x7f0c002c
 int id title_template 0x7f0c002f
-int id titlelabel 0x7f0c0051
+int id titlelabel 0x7f0c0062
 int id topPanel 0x7f0c002e
 int id type 0x7f0c0053
 int id typelabel 0x7f0c0052
@@ -582,6 +583,7 @@ int string menu_settings 0x7f060014
 int string status_bar_notification_info_overflow 0x7f060015
 int string titlelabel 0x7f060016
 int string typelabel 0x7f060017
+int string מתכונים 0x7f060018
 int style AlertDialog_AppCompat 0x7f080073
 int style AlertDialog_AppCompat_Light 0x7f080074
 int style Animation_AppCompat_Dialog 0x7f080075
