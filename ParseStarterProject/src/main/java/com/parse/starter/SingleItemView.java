@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.squareup.picasso.Picasso;
 
@@ -27,8 +28,7 @@ public class SingleItemView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Get view from singleitemview.xml
-        setContentView(R.layout.singleitemview);
-
+        setContentView(R.layout.singleitemview2try);
 
         Intent i = getIntent();
         recipe = (Recipes) i.getSerializableExtra("recipe");
