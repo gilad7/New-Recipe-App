@@ -69,9 +69,7 @@ public class MainActivity extends AppCompatActivity {
       try {
         // Locate the class table named "Recipe" in Parse.com
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Recipe");
-        // Locate the column named "ranknum" in Parse.com and order list
-        // by ascending
-        //query.orderByAscending("recipenum");
+
         ob = query.find();
 
         for (ParseObject parseRecipe : ob) {
@@ -80,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
           recipe.setLevel((String) parseRecipe.get("level"));
           recipe.setTitle((String) parseRecipe.get("title"));
           recipe.setType((String) parseRecipe.get("type"));
+          recipe.setCookTime((Integer) parseRecipe.get("cookTime"));
+          recipe.setPrepTime((Integer) parseRecipe.get("prepTime"));
 
           String imageName = (String)parseRecipe.get("imageName");
 

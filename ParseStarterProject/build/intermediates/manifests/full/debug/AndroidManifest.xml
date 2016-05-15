@@ -39,7 +39,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.parse.starter.SingleItemView"
+            android:name="com.parse.starter.RecipeSingleItemView"
             android:label="@string/מתכונים" >
         </activity>
     </application>

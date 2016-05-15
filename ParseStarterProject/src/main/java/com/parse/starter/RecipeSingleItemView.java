@@ -18,8 +18,6 @@ public class RecipeSingleItemView extends AppCompatActivity {
     //ImageLoader imageLoader = new ImageLoader(this);
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +31,7 @@ public class RecipeSingleItemView extends AppCompatActivity {
         TextView txtlevel = (TextView) findViewById(R.id.level);
         TextView txttype = (TextView) findViewById(R.id.type);
         TextView txttitle = (TextView) findViewById(R.id.title);
+        TextView txtOverallTime = (TextView) findViewById(R.id.overallTime);
 
 
 
@@ -40,6 +39,7 @@ public class RecipeSingleItemView extends AppCompatActivity {
         txtlevel.setText(recipe.level);
         txttype.setText(recipe.type);
         txttitle.setText(recipe.title);
+        txtOverallTime.setText(Integer.toString(recipe.cookTime+recipe.prepTime));
 
         //Locate ImageView in singleitemview.xml
         ImageView imageView = (ImageView)findViewById(R.id.image);
@@ -56,6 +56,10 @@ public class RecipeSingleItemView extends AppCompatActivity {
         }
 
         Picasso.with(getApplicationContext()).load(imageURL).fit().centerCrop().into(imageView);
+
+      /* ImageView timerImage = (ImageView) findViewById(R.id.timer);
+
+        Picasso.with(getApplicationContext()).load(R.id.timer).fit().resize(20,20).into(timerImage);*/
 
         // Capture position and set results to the ImageView
         // Passes flag images URL into ImageLoader.class

@@ -71,9 +71,9 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:40:17-77
 	android:name
 		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:40:27-74
-activity#com.parse.starter.SingleItemView
+activity#com.parse.starter.RecipeSingleItemView
 ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:43:9-45:20
 	android:label
 		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:44:13-44
 	android:name
-		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:43:19-49
+		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:43:19-55

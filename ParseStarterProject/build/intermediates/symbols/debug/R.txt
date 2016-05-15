@@ -408,8 +408,11 @@ int drawable abc_textfield_default_mtrl_alpha 0x7f020037
 int drawable abc_textfield_search_activated_mtrl_alpha 0x7f020038
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f020039
 int drawable abc_textfield_search_material 0x7f02003a
-int drawable notification_template_icon_bg 0x7f02003c
-int drawable temp_img 0x7f02003b
+int drawable cheese 0x7f02003b
+int drawable chef 0x7f02003c
+int drawable notification_template_icon_bg 0x7f02003f
+int drawable temp_img 0x7f02003d
+int drawable timer 0x7f02003e
 int id action0 0x7f0c0055
 int id action_bar 0x7f0c0040
 int id action_bar_activity_content 0x7f0c0000
@@ -425,7 +428,7 @@ int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c003d
 int id action_mode_bar_stub 0x7f0c003c
 int id action_mode_close_button 0x7f0c0025
-int id action_settings 0x7f0c0063
+int id action_settings 0x7f0c0065
 int id activity_chooser_view_content 0x7f0c0026
 int id alertTitle 0x7f0c0030
 int id always 0x7f0c0016
@@ -468,6 +471,8 @@ int id multiply 0x7f0c001e
 int id never 0x7f0c0019
 int id none 0x7f0c000e
 int id normal 0x7f0c000a
+int id overallTime 0x7f0c0064
+int id overallTimelabel 0x7f0c0063
 int id parentPanel 0x7f0c002d
 int id progress_circular 0x7f0c0005
 int id progress_horizontal 0x7f0c0006
