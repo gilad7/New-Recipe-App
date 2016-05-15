@@ -2,62 +2,117 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/levellabel"
-        android:layout_width="wrap_content"
+
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/levellabel"
-        android:layout_alignTop="@+id/level"
-        android:layout_toRightOf="@+id/typelabel"
-        android:layout_toEndOf="@+id/typelabel"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp" />
+        android:id="@+id/frameLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
-    <TextView
-        android:id="@+id/level"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:layout_toRightOf="@+id/levellabel" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            android:id="@+id/image"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="48dp" />
 
-    <TextView
-        android:id="@+id/titlelabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/titlelabel"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/type" />
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="top|left"
+            android:background="#F9F3F5"
+            android:alpha="0.932"
+            android:gravity="top">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image"
-        android:layout_toRightOf="@+id/titlelabel" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="245dp"
+                android:id="@+id/levellabel"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="12dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/chef"
+                android:adjustViewBounds="true"
+                android:maxWidth="26dp"
+                android:maxHeight="16dp"
+                android:scaleType="fitCenter"/>
 
-    <TextView
-        android:id="@+id/typelabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/typelabel"
-        android:layout_below="@+id/titlelabel" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/level"
+                android:layout_toLeftOf="@+id/levellabel"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="4dp"/>
 
-    <TextView
-        android:id="@+id/type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_alignRight="@+id/typelabel" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="245dp"
+                android:id="@+id/typelabel"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="75dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/cheese"
+                android:adjustViewBounds="true"
+                android:maxWidth="26dp"
+                android:maxHeight="16dp"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/type"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/typelabel"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="4dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="245dp"
+                android:id="@+id/overallTimelabel"
+                android:layout_gravity="right|top"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="158dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/timer"
+                android:adjustViewBounds="true"
+                android:maxWidth="26dp"
+                android:maxHeight="16dp"
+                android:scaleType="fitCenter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/overallTime"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/overallTimelabel"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="4dp"/>
 
 
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="215dp"
-        android:scaleType="centerCrop"
-        android:id="@+id/image" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/title"
+                android:layout_marginRight="12dp"
+                android:layout_alignParentRight="true"/>
 
+        </RelativeLayout>
+    </FrameLayout>
 
-</RelativeLayout>
-<!-- From: file:/D:/Work%20Space/Recipes%20New/ParseStarterProject/src/main/res/layout/singleitemview.xml -->
+</RelativeLayout><!-- From: file:/D:/Work%20Space/Recipes%20New/ParseStarterProject/src/main/res/layout/singleitemview.xml -->

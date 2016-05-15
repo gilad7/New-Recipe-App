@@ -31,17 +31,17 @@ public class MainActivity extends AppCompatActivity {
   ListView listView;
   List<ParseObject> ob;
   ProgressDialog mProgressDialog;
-  RecipesListView adapter;
+  RecipesMainAdapter adapter;
   private List<Recipe> recipeList = null;
 
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    //Get the view from listview_main.xml
-    setContentView(R.layout.listview_main);
+    //Get the view from listview_main-activity.xmlivity.xml
+    setContentView(R.layout.listview_main_activity);
     // Execute RemoteDataTask AsyncTask
-     new RemoteDataTask().execute();
+    new RemoteDataTask().execute();
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }
@@ -66,20 +66,26 @@ public class MainActivity extends AppCompatActivity {
     protected Void doInBackground(Void... params) {
       // Create the array
       recipeList = new ArrayList<Recipe>();
+
+
+
       try {
         // Locate the class table named "Recipe" in Parse.com
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Recipe");
 
         ob = query.find();
 
-        for (ParseObject parseRecipe : ob) {
+        for (final ParseObject parseRecipe : ob) {
 
-          Recipe recipe = new Recipe();
+
+          final Recipe recipe = new Recipe();
+
           recipe.setLevel((String) parseRecipe.get("level"));
           recipe.setTitle((String) parseRecipe.get("title"));
           recipe.setType((String) parseRecipe.get("type"));
           recipe.setCookTime((Integer) parseRecipe.get("cookTime"));
           recipe.setPrepTime((Integer) parseRecipe.get("prepTime"));
+         // recipe.setDirections((ParseObject) parseRecipe.get("directions"));
 
           String imageName = (String)parseRecipe.get("imageName");
 
@@ -103,10 +109,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostExecute(Void result) {
 
-      //locate list view in listview_main.xml
+      //locate list view in listview_main-activity.xmlivity.xml
       listView = (ListView)findViewById(R.id.listview);
       //pass the results to ArrayAdapter
-      adapter = new RecipesListView(MainActivity.this, recipeList);
+      adapter = new RecipesMainAdapter(MainActivity.this, recipeList);
       //Bind the adapter to the listview
       listView.setAdapter(adapter);
       //close progress dialog

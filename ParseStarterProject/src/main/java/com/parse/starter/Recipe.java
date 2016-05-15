@@ -1,5 +1,7 @@
 package com.parse.starter;
 
+import com.parse.ParseObject;
+
 import java.io.Serializable;
 
 /**
@@ -15,6 +17,16 @@ public class Recipe implements Serializable {
     public String imageName;
     public int cookTime;
     public int prepTime;
+    public ParseObject directions;
+
+    public ParseObject getDirections() {
+        return directions;
+    }
+
+    public void setDirections(ParseObject directions) {
+        this.directions = directions;
+    }
+
 
     public int getCookTime() {
         return cookTime;

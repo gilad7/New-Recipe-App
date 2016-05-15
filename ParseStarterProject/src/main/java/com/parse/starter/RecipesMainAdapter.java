@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by Dahan on 08/05/2016.
  */
-public class RecipesListView extends BaseAdapter {
+public class RecipesMainAdapter extends BaseAdapter {
     //Declare variables
     Context context;
     LayoutInflater inflater;
@@ -25,7 +25,7 @@ public class RecipesListView extends BaseAdapter {
     private ArrayList<Recipe> arrayList;
     //ImageLoader imageLoader;
 
-    public RecipesListView(Context context, List<Recipe> recipeslist){
+    public RecipesMainAdapter(Context context, List<Recipe> recipeslist){
 
         this.context = context;
         this.recipeslist = recipeslist;
@@ -67,12 +67,12 @@ public class RecipesListView extends BaseAdapter {
         if(view == null){
 
             holder = new ViewHolder();
-            view = inflater.inflate(R.layout.listview_item, null);
-            //Locate TextViews in listview_item.xml
+            view = inflater.inflate(R.layout.recipes_main_listview, null);
+            //Locate TextViews in listview_recipes_itemspes-items.xml
             holder.title = (TextView)view.findViewById(R.id.title);
             holder.level = (TextView)view.findViewById(R.id.level);
             holder.type = (TextView)view.findViewById(R.id.type);
-            //Locate ImageView in listview_item.xml
+            //Locate ImageView in listview_recipes-items.xmlitems.xml
             holder.image = (ImageView) view.findViewById(R.id.image);
             view.setTag(holder);
         }else{
