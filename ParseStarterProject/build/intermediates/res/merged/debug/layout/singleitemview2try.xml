@@ -31,7 +31,7 @@ android:layout_width="match_parent" android:layout_height="match_parent">
             android:layout_height="245dp"
             android:id="@+id/levellabel"
             android:layout_gravity="right|top"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="12dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/chef"
@@ -57,7 +57,7 @@ android:layout_width="match_parent" android:layout_height="match_parent">
             android:layout_height="245dp"
             android:id="@+id/typelabel"
             android:layout_gravity="right|top"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="75dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/cheese"
@@ -82,7 +82,7 @@ android:layout_width="match_parent" android:layout_height="match_parent">
             android:layout_height="245dp"
             android:id="@+id/overallTimelabel"
             android:layout_gravity="right|top"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="158dp"
             android:layout_alignParentRight="true"
             android:src="@drawable/timer"
@@ -111,6 +111,8 @@ android:layout_width="match_parent" android:layout_height="match_parent">
             android:id="@+id/title"
             android:layout_marginRight="12dp"
             android:layout_alignParentRight="true"/>
+
+
 
     </RelativeLayout>
 </FrameLayout>

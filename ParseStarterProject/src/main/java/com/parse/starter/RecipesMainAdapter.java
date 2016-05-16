@@ -41,6 +41,7 @@ public class RecipesMainAdapter extends BaseAdapter {
         TextView title;
         TextView type;
         TextView level;
+        TextView overallTime;
         TextView prepTime;
         TextView cookTime;
     }
@@ -72,6 +73,7 @@ public class RecipesMainAdapter extends BaseAdapter {
             holder.title = (TextView)view.findViewById(R.id.title);
             holder.level = (TextView)view.findViewById(R.id.level);
             holder.type = (TextView)view.findViewById(R.id.type);
+            holder.overallTime = (TextView) view.findViewById(R.id.overallTime);
             //Locate ImageView in listview_recipes-items.xmlitems.xml
             holder.image = (ImageView) view.findViewById(R.id.image);
             view.setTag(holder);
@@ -84,6 +86,7 @@ public class RecipesMainAdapter extends BaseAdapter {
         holder.level.setText(recipe.getLevel());
         holder.title.setText(recipe.getTitle());
         holder.type.setText(recipe.getType());
+        holder.overallTime.setText(Integer.toString(recipe.getCookTime()+recipe.getPrepTime()));
         //set results into ImageView
         //imageLoader.DisplayImage(recipeslist.get(position).getImage(), holder.image);
 
