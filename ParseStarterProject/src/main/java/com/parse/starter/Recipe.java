@@ -2,7 +2,10 @@ package com.parse.starter;
 
 import com.parse.ParseObject;
 
+import org.json.JSONObject;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by Dahan on 08/05/2016.
@@ -17,13 +20,28 @@ public class Recipe implements Serializable {
     public String imageName;
     public int cookTime;
     public int prepTime;
-    public ParseObject directions;
+    public JSONObject directions;
+    public JSONObject ingredients;
 
-    public ParseObject getDirections() {
+    public int getOverallTime(){
+        return prepTime + cookTime;
+
+    }
+
+    public JSONObject getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(JSONObject ingredients) {
+        this.ingredients = ingredients;
+    }
+
+
+    public JSONObject getDirections() {
         return directions;
     }
 
-    public void setDirections(ParseObject directions) {
+    public void setDirections(JSONObject directions) {
         this.directions = directions;
     }
 

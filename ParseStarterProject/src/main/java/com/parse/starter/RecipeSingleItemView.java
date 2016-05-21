@@ -30,11 +30,15 @@ public class RecipeSingleItemView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Get view from singleitemview.xml
-        setContentView(R.layout.singleitemview2try);
+        setContentView(R.layout.singleitemview);
 
 
         Intent i = getIntent();
         recipe = (Recipe) i.getSerializableExtra("recipe");
+
+        //Log.i("Json", (recipe.getDirections()).toString());
+        //Log.i("Json", String.valueOf(recipe.getIngredients()));
+
 
 
         //Locate textviews in singleitemview.xml
@@ -48,7 +52,7 @@ public class RecipeSingleItemView extends AppCompatActivity {
         txtlevel.setText(recipe.level);
         txttype.setText(recipe.type);
         txttitle.setText(recipe.title);
-        txtOverallTime.setText(Integer.toString(recipe.cookTime + recipe.prepTime));
+        txtOverallTime.setText(Integer.toString(recipe.getOverallTime()));
 
 
         //Locate ImageView in singleitemview.xml

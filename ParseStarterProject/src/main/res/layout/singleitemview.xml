@@ -3,116 +3,121 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/frameLayout"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="false"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="245dp"
-            android:id="@+id/image"
-            android:layout_gravity="right|top"
-            android:layout_marginTop="48dp" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
 
-        <RelativeLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="top|left"
-            android:background="#F9F3F5"
-            android:alpha="0.932"
-            android:gravity="top">
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#F9F3F5"
+                android:alpha="0.932"
+                android:gravity="top">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="245dp"
+                    android:id="@+id/levellabel"
+                    android:layout_gravity="right|top"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/chef"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="26dp"
+                    android:maxHeight="16dp"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/level"
+                    android:layout_toLeftOf="@+id/levellabel"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="245dp"
+                    android:id="@+id/typelabel"
+                    android:layout_gravity="right|top"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="75dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/cheese"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="26dp"
+                    android:maxHeight="16dp"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/type"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/typelabel"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="4dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="245dp"
+                    android:id="@+id/overallTimelabel"
+                    android:layout_gravity="right|top"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="158dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/timer"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="26dp"
+                    android:maxHeight="16dp"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/overallTime"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/overallTimelabel"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="4dp"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/title"
+                    android:layout_marginRight="12dp"
+                    android:layout_alignParentRight="true"/>
+
+
+
+            </RelativeLayout>
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="245dp"
-                android:id="@+id/levellabel"
-                android:layout_gravity="right|top"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="12dp"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/chef"
-                android:adjustViewBounds="true"
-                android:maxWidth="26dp"
-                android:maxHeight="16dp"
-                android:scaleType="fitCenter"/>
+            android:layout_width="fill_parent"
+            android:layout_height="235dp"
+            android:id="@+id/image" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/level"
-                android:layout_toLeftOf="@+id/levellabel"
-                android:layout_gravity="bottom"
-                android:layout_marginRight="10dp"
-                android:layout_alignParentEnd="false"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="4dp"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="245dp"
-                android:id="@+id/typelabel"
-                android:layout_gravity="right|top"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="75dp"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/cheese"
-                android:adjustViewBounds="true"
-                android:maxWidth="26dp"
-                android:maxHeight="16dp"
-                android:scaleType="fitCenter"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/type"
-                android:layout_alignParentBottom="true"
-                android:layout_toLeftOf="@+id/typelabel"
-                android:layout_marginRight="10dp"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="4dp"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="245dp"
-                android:id="@+id/overallTimelabel"
-                android:layout_gravity="right|top"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="158dp"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/timer"
-                android:adjustViewBounds="true"
-                android:maxWidth="26dp"
-                android:maxHeight="16dp"
-                android:scaleType="fitCenter"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/overallTime"
-                android:layout_alignParentBottom="true"
-                android:layout_toLeftOf="@+id/overallTimelabel"
-                android:layout_marginRight="10dp"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="4dp"/>
-
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/title"
-                android:layout_marginRight="12dp"
-                android:layout_alignParentRight="true"/>
-
-        </RelativeLayout>
-    </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

@@ -8,9 +8,12 @@
  */
 package com.parse.starter;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
@@ -21,7 +24,10 @@ import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -38,10 +44,14 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
     //Get the view from listview_main-activity.xmlivity.xml
     setContentView(R.layout.listview_main_activity);
     // Execute RemoteDataTask AsyncTask
     new RemoteDataTask().execute();
+
+   // getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+    //getSupportActionBar().setCustomView(R.layout.action_bar);
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }
@@ -67,8 +77,6 @@ public class MainActivity extends AppCompatActivity {
       // Create the array
       recipeList = new ArrayList<Recipe>();
 
-
-
       try {
         // Locate the class table named "Recipe" in Parse.com
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Recipe");
@@ -85,7 +93,14 @@ public class MainActivity extends AppCompatActivity {
           recipe.setType((String) parseRecipe.get("type"));
           recipe.setCookTime((Integer) parseRecipe.get("cookTime"));
           recipe.setPrepTime((Integer) parseRecipe.get("prepTime"));
-         // recipe.setDirections((ParseObject) parseRecipe.get("directions"));
+
+//          JSONObject directions = (JSONObject) parseRecipe.get("directions");
+//          Log.i("Json", directions.toString());
+        // recipe.setDirections(parseRecipe.getJSONObject("directions"));
+         //recipe.setDirections(parseRecipe.getJSONObject("ingredients"));
+
+
+
 
           String imageName = (String)parseRecipe.get("imageName");
 
