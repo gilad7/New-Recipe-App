@@ -8,14 +8,19 @@
  */
 package com.parse.starter;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.parse.ParseAnalytics;
@@ -29,6 +34,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -40,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
   RecipesMainAdapter adapter;
   private List<Recipe> recipeList = null;
 
-
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -50,8 +55,19 @@ public class MainActivity extends AppCompatActivity {
     // Execute RemoteDataTask AsyncTask
     new RemoteDataTask().execute();
 
-   // getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-    //getSupportActionBar().setCustomView(R.layout.action_bar);
+//    getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_HOME_AS_UP);
+//    getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
+
+
+    String languageToLoad  = "he";
+    Locale locale = new Locale(languageToLoad);
+    Locale.setDefault(locale);
+    Configuration config = new Configuration();
+    config.locale = locale;
+    getBaseContext().getResources().updateConfiguration(config,
+            getBaseContext().getResources().getDisplayMetrics());
+    this.setContentView(R.layout.listview_main_activity);
+
 
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
   }

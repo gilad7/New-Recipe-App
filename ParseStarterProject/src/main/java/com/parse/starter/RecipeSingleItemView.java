@@ -1,6 +1,7 @@
 package com.parse.starter;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -14,6 +15,7 @@ import com.parse.ParseQuery;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Dahan on 08/05/2016.
@@ -31,6 +33,15 @@ public class RecipeSingleItemView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //Get view from singleitemview.xml
         setContentView(R.layout.singleitemview);
+
+        String languageToLoad  = "he";
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config,
+                getBaseContext().getResources().getDisplayMetrics());
+        this.setContentView(R.layout.singleitemview);
 
 
         Intent i = getIntent();
