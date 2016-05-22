@@ -1545,7 +1545,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c003d;
         public static final int action_mode_bar_stub=0x7f0c003c;
         public static final int action_mode_close_button=0x7f0c0025;
-        public static final int action_settings=0x7f0c0067;
+        public static final int action_settings=0x7f0c0068;
         public static final int activity_chooser_view_content=0x7f0c0026;
         public static final int alertTitle=0x7f0c0030;
         public static final int always=0x7f0c0016;
@@ -1625,6 +1625,7 @@ containing a value of this type.
         public static final int text2=0x7f0c0058;
         public static final int textSpacerNoButtons=0x7f0c0033;
         public static final int time=0x7f0c0056;
+        public static final int timerFont=0x7f0c0067;
         public static final int title=0x7f0c002c;
         public static final int title_template=0x7f0c002f;
         public static final int topPanel=0x7f0c002e;
@@ -1686,6 +1687,7 @@ containing a value of this type.
         public static final int singleitemview=0x7f040028;
         public static final int singleitemview2try=0x7f040029;
         public static final int support_simple_spinner_dropdown_item=0x7f04002a;
+        public static final int test_single=0x7f04002b;
     }
     public static final class menu {
         public static final int menu_main=0x7f0d0000;
@@ -1712,13 +1714,14 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f06000c;
         public static final int abc_toolbar_collapse_description=0x7f060012;
         public static final int app_name=0x7f06000d;
-        public static final int levellabel=0x7f060013;
-        public static final int menu_settings=0x7f060014;
+        public static final int icon_credit_card=0x7f060013;
+        public static final int levellabel=0x7f060014;
+        public static final int menu_settings=0x7f060015;
         public static final int overallTimelabel=0x7f06000e;
-        public static final int status_bar_notification_info_overflow=0x7f060015;
-        public static final int titlelabel=0x7f060016;
-        public static final int typelabel=0x7f060017;
-        public static final int מתכונים=0x7f060018;
+        public static final int status_bar_notification_info_overflow=0x7f060016;
+        public static final int titlelabel=0x7f060017;
+        public static final int typelabel=0x7f060018;
+        public static final int מתכונים=0x7f060019;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f080073;

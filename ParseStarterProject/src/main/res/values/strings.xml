@@ -17,5 +17,6 @@
     <string name="titlelabel">title:</string>
     <string name="typelabel">type:</string>
     <string name="מתכונים">מתכונים</string>
+    <string name="icon_credit_card">icon</string>
 
 </resources>

@@ -428,7 +428,7 @@ int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c003d
 int id action_mode_bar_stub 0x7f0c003c
 int id action_mode_close_button 0x7f0c0025
-int id action_settings 0x7f0c0067
+int id action_settings 0x7f0c0068
 int id activity_chooser_view_content 0x7f0c0026
 int id alertTitle 0x7f0c0030
 int id always 0x7f0c0016
@@ -508,6 +508,7 @@ int id text 0x7f0c005a
 int id text2 0x7f0c0058
 int id textSpacerNoButtons 0x7f0c0033
 int id time 0x7f0c0056
+int id timerFont 0x7f0c0067
 int id title 0x7f0c002c
 int id title_template 0x7f0c002f
 int id topPanel 0x7f0c002e
@@ -565,6 +566,7 @@ int layout select_dialog_singlechoice_material 0x7f040027
 int layout singleitemview 0x7f040028
 int layout singleitemview2try 0x7f040029
 int layout support_simple_spinner_dropdown_item 0x7f04002a
+int layout test_single 0x7f04002b
 int menu menu_main 0x7f0d0000
 int mipmap ic_launcher 0x7f030000
 int string abc_action_bar_home_description 0x7f060000
@@ -585,13 +587,14 @@ int string abc_shareactionprovider_share_with 0x7f06000b
 int string abc_shareactionprovider_share_with_application 0x7f06000c
 int string abc_toolbar_collapse_description 0x7f060012
 int string app_name 0x7f06000d
-int string levellabel 0x7f060013
-int string menu_settings 0x7f060014
+int string icon_credit_card 0x7f060013
+int string levellabel 0x7f060014
+int string menu_settings 0x7f060015
 int string overallTimelabel 0x7f06000e
-int string status_bar_notification_info_overflow 0x7f060015
-int string titlelabel 0x7f060016
-int string typelabel 0x7f060017
-int string מתכונים 0x7f060018
+int string status_bar_notification_info_overflow 0x7f060016
+int string titlelabel 0x7f060017
+int string typelabel 0x7f060018
+int string מתכונים 0x7f060019
 int style AlertDialog_AppCompat 0x7f080073
 int style AlertDialog_AppCompat_Light 0x7f080074
 int style Animation_AppCompat_Dialog 0x7f080075

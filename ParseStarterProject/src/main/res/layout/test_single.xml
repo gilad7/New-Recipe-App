@@ -113,42 +113,33 @@
             </RelativeLayout>
 
             <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="235dp"
-            android:id="@+id/image" />
+                android:layout_width="fill_parent"
+                android:layout_height="235dp"
+                android:id="@+id/image" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/ingredientsText"
-                android:layout_marginBottom="50dp"
-                android:layout_above="@+id/directionsText"
-                android:gravity="center_vertical|center"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center" />
-
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView"
-                android:layout_alignParentBottom="true"
-                android:layout_above="@+id/ingredientsText"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="top|center" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/directionsText"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center" />
 
         </LinearLayout>
 
     </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="130dp">
+
+        <com.parse.starter.iconify.widget.IconTextView
+            android:id="@+id/timerFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{fa_clock_o}"
+            android:textSize="50sp"
+            android:textColor="#F59012"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
 
 
 </RelativeLayout>
