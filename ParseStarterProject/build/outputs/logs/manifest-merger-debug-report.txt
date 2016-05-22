@@ -15,8 +15,11 @@ ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifes
 		INJECTED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml
 uses-sdk
 ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:14:5-16:41
+MERGED from [com.joanzapata.iconify:android-iconify-fontawesome:2.2.2] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify-fontawesome\2.2.2\AndroidManifest.xml:6:5-43
+MERGED from [com.joanzapata.iconify:android-iconify:2.2.2] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify\2.2.2\AndroidManifest.xml:6:5-43
+MERGED from [com.android.support:support-v4:22.2.1] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:appcompat-v7:22.2.0] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:22.2.0] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.1] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:16:9-38
 		INJECTED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml
@@ -43,8 +46,9 @@ ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifes
 		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:22:22-77
 application
 ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:24:5-47:19
+MERGED from [com.android.support:support-v4:22.2.1] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:22.2.0] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:22.2.0] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.1] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:28:9-41
 	android:allowBackup

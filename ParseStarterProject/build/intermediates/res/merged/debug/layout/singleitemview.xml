@@ -117,7 +117,37 @@
             android:layout_height="235dp"
             android:id="@+id/image" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/ingredientsText"
+                android:layout_marginBottom="50dp"
+                android:layout_above="@+id/directionsText"
+                android:gravity="center_vertical|center"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="63dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/directionsText"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center" />
+
         </LinearLayout>
+
     </ScrollView>
+
 
 </RelativeLayout><!-- From: file:/D:/Work%20Space/Recipes%20New/ParseStarterProject/src/main/res/layout/singleitemview.xml -->

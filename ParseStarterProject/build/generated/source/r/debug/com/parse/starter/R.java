@@ -1545,7 +1545,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c003d;
         public static final int action_mode_bar_stub=0x7f0c003c;
         public static final int action_mode_close_button=0x7f0c0025;
-        public static final int action_settings=0x7f0c0064;
+        public static final int action_settings=0x7f0c0067;
         public static final int activity_chooser_view_content=0x7f0c0026;
         public static final int alertTitle=0x7f0c0030;
         public static final int always=0x7f0c0016;
@@ -1561,6 +1561,7 @@ containing a value of this type.
         public static final int decor_content_parent=0x7f0c003e;
         public static final int default_activity_button=0x7f0c0029;
         public static final int dialog=0x7f0c001b;
+        public static final int directionsText=0x7f0c0065;
         public static final int disableHome=0x7f0c000c;
         public static final int dropdown=0x7f0c001c;
         public static final int edit_query=0x7f0c0042;
@@ -1574,7 +1575,9 @@ containing a value of this type.
         public static final int icon=0x7f0c002b;
         public static final int ifRoom=0x7f0c0018;
         public static final int image=0x7f0c0028;
+        public static final int imageView=0x7f0c0066;
         public static final int info=0x7f0c005b;
+        public static final int ingredientsText=0x7f0c0064;
         public static final int level=0x7f0c005f;
         public static final int levellabel=0x7f0c005e;
         public static final int line1=0x7f0c0055;

@@ -2,53 +2,39 @@
 <items version="2" >
 
     <item
-        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-fdc1c4d0c72eb5649006bd6424e9cf7526d5313a.jar" />
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-5baad6a8e10eb879f9ca68d22272175da393d645.jar" />
     </item>
     <item
-        jar="C:\Users\Dahan\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jar="D:\Programs\SDK\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\bolts-tasks-1.4.0-da7cc4c78819316f55575bffb239a810d47d5360.jar" />
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-204e77002271b87657849fa20668504650e0e82c.jar" />
     </item>
     <item
-        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-84aaf3ec15e8d3859fed280070636efc4d75dd62.jar" />
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-9491678e3ac1cf61dd7cbd52835d74bf3159f529.jar" />
     </item>
     <item
-        jar="C:\Users\Dahan\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify\2.2.2\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\picasso-2.5.2-7d3c6247e0e46c50b92894c41343510751cac7c6.jar" />
+        sha1="970b2eadc8805e4e04a9008f97368c7b8cc78651">
+        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-679248769784cdb41488df9e463aa28fa1d30bd6.jar" />
     </item>
     <item
-        jar="C:\Users\Dahan\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.13.0\58a7d54b6a4f28be11f0cecec93097eddf473e6f\parse-android-1.13.0.jar"
+        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify-fontawesome\2.2.2\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="58a7d54b6a4f28be11f0cecec93097eddf473e6f">
-        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\parse-android-1.13.0-6eaa10c36ae8d74fb61118d63da84fc54940efca.jar" />
-    </item>
-    <item
-        jar="D:\Programs\SDK\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-04565a383cf3461ac3a89e2b1c61c901d4af09de.jar" />
-    </item>
-    <item
-        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-2ff922f5c5dea21774ca1ba1ea77090190b33d0f.jar" />
+        sha1="af20faf2a6fff6cac01bb9ee4130ee942a29ec22">
+        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-81ccf7be2762161dc2acf6bde8e8424a30bbccd4.jar" />
     </item>
 
 </items>

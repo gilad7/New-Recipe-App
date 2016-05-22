@@ -20,8 +20,8 @@ public class Recipe implements Serializable {
     public String imageName;
     public int cookTime;
     public int prepTime;
-    public JSONObject directions;
-    public JSONObject ingredients;
+    public transient JSONObject directions;
+    public transient JSONObject ingredients;
 
     public int getOverallTime(){
         return prepTime + cookTime;
@@ -41,8 +41,9 @@ public class Recipe implements Serializable {
         return directions;
     }
 
-    public void setDirections(JSONObject directions) {
+    public String setDirections(JSONObject directions) {
         this.directions = directions;
+        return null;
     }
 
 
