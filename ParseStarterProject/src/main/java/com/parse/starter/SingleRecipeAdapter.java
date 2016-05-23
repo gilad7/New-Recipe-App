@@ -2,6 +2,7 @@ package com.parse.starter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +25,10 @@ public class SingleRecipeAdapter extends BaseAdapter {
     LayoutInflater inflater;
     private List<Recipe> recipelist = null;
     private ArrayList<Recipe> arrayList;
+
+    String directions;
+    String ingredients;
+
 
     public SingleRecipeAdapter(Context context, List<Recipe> recipeslist){
 
@@ -57,6 +63,7 @@ public class SingleRecipeAdapter extends BaseAdapter {
         TextView overallTime;
         TextView prepTime;
         TextView cookTime;
+        TextView directions;
     }
     @Override
     public View getView(final int position, View view, ViewGroup viewGroup) {
@@ -71,6 +78,11 @@ public class SingleRecipeAdapter extends BaseAdapter {
             holder.level = (TextView)view.findViewById(R.id.level);
             holder.type = (TextView)view.findViewById(R.id.type);
             holder.overallTime = (TextView) view.findViewById(R.id.overallTime);
+
+//            holder.directions = (TextView) view.findViewById(R.id.directionsText);
+
+
+
             //Locate ImageView in listview_recipes-items.xmlitems.xml
             holder.image = (ImageView) view.findViewById(R.id.image);
             view.setTag(holder);
@@ -84,6 +96,8 @@ public class SingleRecipeAdapter extends BaseAdapter {
         holder.title.setText(recipe.getTitle());
         holder.type.setText(recipe.getType());
         holder.overallTime.setText(Integer.toString(recipe.getOverallTime()));
+
+//        holder.directions.setText(recipe.getDirections().toString());
 
 
         String imageURL = "";
@@ -99,21 +113,10 @@ public class SingleRecipeAdapter extends BaseAdapter {
 
         Picasso.with(context).load(imageURL).fit().centerCrop().into(holder.image);
 
-
-                //send single item click data to RecipeSingleItemView Class
-/*
-                Intent intent = new Intent(context, SingleRecipeAdapter.class);
-
-                intent.putExtra("recipe", recipe);
-                intent.putExtra("directions", String.valueOf(recipe.getDirections()));
-                intent.putExtra("ingredients", String.valueOf(recipe.getIngredients()));
-                //Start RecipeSingleItemView.class
-                context.startActivity(intent);*/
-
-
-
-
         return view;
     }
+
+
+
 
 }

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:10:1-49:12
+ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:10:1-53:12
 	package
 		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:11:5-32
 		INJECTED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml
@@ -45,7 +45,7 @@ ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifes
 	android:name
 		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:22:22-77
 application
-ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:24:5-47:19
+ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:24:5-51:19
 MERGED from [com.android.support:support-v4:22.2.1] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:22.2.0] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
@@ -85,3 +85,11 @@ ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifes
 		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:45:13-43
 	android:name
 		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:43:19-55
+activity#com.parse.starter.RecipeSingleItemTRY
+ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:47:9-50:20
+	android:label
+		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:48:13-45
+	android:configChanges
+		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:49:13-43
+	android:name
+		ADDED from D:\Work Space\Recipes New\ParseStarterProject\src\main\AndroidManifest.xml:47:19-54
