@@ -111,10 +111,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="85dp"
-
         android:layout_below="@+id/image"
-        android:layout_alignParentRight="true"
-        >
+        android:layout_alignParentRight="true">
 
         <TextView
             android:id="@+id/timerFont"
@@ -133,7 +131,49 @@
             android:text="@string/overllTimeText"
             android:layout_alignParentRight="true"
             android:layout_marginRight="40dp"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/prepTime"
+            android:id="@+id/prepTime"
+            android:layout_centerVertical="true"
+            android:layout_alignRight="@+id/overallTimeText"
+            android:layout_alignEnd="@+id/overallTimeText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=""
+            android:id="@+id/numberPrepTime"
+            android:layout_below="@+id/prepTime"
+            android:layout_alignRight="@+id/prepTime"
+            android:layout_alignEnd="@+id/prepTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/cookTime"
+            android:id="@+id/cookTime"
+            android:layout_below="@+id/overallTimeText"
+            android:layout_toLeftOf="@+id/overallTimeText"
+            android:layout_toStartOf="@+id/overallTimeText"
+            android:layout_marginRight="60dp"
+            android:layout_marginEnd="55dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=""
+            android:id="@+id/numberCookTime"
+            android:layout_below="@+id/cookTime"
+            android:layout_alignRight="@+id/cookTime"
+            android:layout_alignEnd="@+id/cookTime" />
     </RelativeLayout>
 
 </RelativeLayout>

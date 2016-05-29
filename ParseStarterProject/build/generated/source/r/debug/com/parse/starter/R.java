@@ -1545,7 +1545,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c003d;
         public static final int action_mode_bar_stub=0x7f0c003c;
         public static final int action_mode_close_button=0x7f0c0025;
-        public static final int action_settings=0x7f0c0068;
+        public static final int action_settings=0x7f0c006c;
         public static final int activity_chooser_view_content=0x7f0c0026;
         public static final int alertTitle=0x7f0c0030;
         public static final int always=0x7f0c0016;
@@ -1556,12 +1556,13 @@ containing a value of this type.
         public static final int chronometer=0x7f0c0057;
         public static final int collapseActionView=0x7f0c0017;
         public static final int contentPanel=0x7f0c0031;
+        public static final int cookTime=0x7f0c0068;
         public static final int custom=0x7f0c0035;
         public static final int customPanel=0x7f0c0034;
         public static final int decor_content_parent=0x7f0c003e;
         public static final int default_activity_button=0x7f0c0029;
         public static final int dialog=0x7f0c001b;
-        public static final int directionsText=0x7f0c0067;
+        public static final int directionsText=0x7f0c006b;
         public static final int disableHome=0x7f0c000c;
         public static final int dropdown=0x7f0c001c;
         public static final int edit_query=0x7f0c0042;
@@ -1576,7 +1577,7 @@ containing a value of this type.
         public static final int ifRoom=0x7f0c0018;
         public static final int image=0x7f0c0028;
         public static final int info=0x7f0c005b;
-        public static final int ingredientsText=0x7f0c0066;
+        public static final int ingredientsText=0x7f0c006a;
         public static final int level=0x7f0c005f;
         public static final int levellabel=0x7f0c005e;
         public static final int line1=0x7f0c0055;
@@ -1590,10 +1591,13 @@ containing a value of this type.
         public static final int never=0x7f0c0019;
         public static final int none=0x7f0c000e;
         public static final int normal=0x7f0c000a;
+        public static final int numberCookTime=0x7f0c0069;
+        public static final int numberPrepTime=0x7f0c0067;
         public static final int overallTime=0x7f0c0063;
         public static final int overallTimeText=0x7f0c0065;
         public static final int overallTimelabel=0x7f0c0062;
         public static final int parentPanel=0x7f0c002d;
+        public static final int prepTime=0x7f0c0066;
         public static final int progress_circular=0x7f0c0005;
         public static final int progress_horizontal=0x7f0c0006;
         public static final int radio=0x7f0c003a;
@@ -1715,13 +1719,15 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f06000c;
         public static final int abc_toolbar_collapse_description=0x7f060012;
         public static final int app_name=0x7f06000d;
-        public static final int levellabel=0x7f060013;
-        public static final int menu_settings=0x7f060014;
+        public static final int cookTime=0x7f060013;
+        public static final int levellabel=0x7f060014;
+        public static final int menu_settings=0x7f060015;
         public static final int overllTimeText=0x7f06000e;
-        public static final int status_bar_notification_info_overflow=0x7f060015;
-        public static final int titlelabel=0x7f060016;
-        public static final int typelabel=0x7f060017;
-        public static final int מתכונים=0x7f060018;
+        public static final int prepTime=0x7f060016;
+        public static final int status_bar_notification_info_overflow=0x7f060017;
+        public static final int titlelabel=0x7f060018;
+        public static final int typelabel=0x7f060019;
+        public static final int מתכונים=0x7f06001a;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f080073;

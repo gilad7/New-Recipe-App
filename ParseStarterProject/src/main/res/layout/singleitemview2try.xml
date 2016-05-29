@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent" android:layout_height="match_parent">
-
-
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/frameLayout"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentEnd="true">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="235dp"
-        android:id="@+id/image"
-        android:layout_gravity="right|top"
-        android:layout_marginTop="45dp" />
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_gravity="top|left"
+        android:layout_height="48dp"
         android:background="#F9F3F5"
         android:alpha="0.932"
         android:gravity="top">
@@ -115,6 +99,82 @@ android:layout_width="match_parent" android:layout_height="match_parent">
 
 
     </RelativeLayout>
-</FrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="217dp"
+        android:id="@+id/image"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="45dp" />
+
+
+
+        <TextView
+            android:id="@+id/timerFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#F59012"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/image"/>
+
+        <TextView
+            android:id="@+id/overallTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/overllTimeText"
+            android:layout_marginRight="25dp"
+            android:layout_below="@+id/image"
+            android:layout_toLeftOf="@+id/timerFont"
+            android:layout_toStartOf="@+id/timerFont"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/prepTime"
+            android:id="@+id/prepTime"
+            android:layout_below="@+id/image"
+            android:layout_alignRight="@+id/overallTimeText"
+            android:layout_alignEnd="@+id/overallTimeText"
+            android:layout_marginTop="36dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=""
+            android:id="@+id/numberPrepTime"
+            android:layout_below="@+id/prepTime"
+            android:layout_alignRight="@+id/prepTime"
+            android:layout_alignEnd="@+id/prepTime" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/cookTime"
+            android:id="@+id/cookTime"
+            android:layout_marginRight="64dp"
+            android:layout_marginEnd="64dp"
+            android:layout_alignTop="@+id/prepTime"
+            android:layout_toLeftOf="@+id/overallTimeText"
+            android:layout_toStartOf="@+id/overallTimeText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=""
+            android:id="@+id/numberCookTime"
+            android:layout_below="@+id/cookTime"
+            android:layout_alignRight="@+id/cookTime"
+            android:layout_alignEnd="@+id/cookTime" />
+
 
 </RelativeLayout>

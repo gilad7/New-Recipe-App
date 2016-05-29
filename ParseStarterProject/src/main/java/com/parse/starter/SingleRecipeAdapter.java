@@ -72,16 +72,15 @@ public class SingleRecipeAdapter extends BaseAdapter {
         if(view == null){
 
             holder = new ViewHolder();
-            view = inflater.inflate(R.layout.single_item_try_adapter, null);
+            view = inflater.inflate(R.layout.singleitemview2try, null);
             //Locate TextViews in listview_recipes_itemspes-items.xml
             holder.title = (TextView)view.findViewById(R.id.title);
             holder.level = (TextView)view.findViewById(R.id.level);
             holder.type = (TextView)view.findViewById(R.id.type);
             holder.overallTime = (TextView) view.findViewById(R.id.overallTime);
-
+            holder.prepTime = (TextView) view.findViewById(R.id.numberPrepTime);
+            holder.cookTime = (TextView) view.findViewById(R.id.numberCookTime);
 //            holder.directions = (TextView) view.findViewById(R.id.directionsText);
-
-
 
             //Locate ImageView in listview_recipes-items.xmlitems.xml
             holder.image = (ImageView) view.findViewById(R.id.image);
@@ -96,6 +95,8 @@ public class SingleRecipeAdapter extends BaseAdapter {
         holder.title.setText(recipe.getTitle());
         holder.type.setText(recipe.getType());
         holder.overallTime.setText(Integer.toString(recipe.getOverallTime()));
+        holder.prepTime.setText(Integer.toString(recipe.getPrepTime()));
+        holder.cookTime.setText(Integer.toString(recipe.getCookTime()));
 
 //        holder.directions.setText(recipe.getDirections().toString());
 

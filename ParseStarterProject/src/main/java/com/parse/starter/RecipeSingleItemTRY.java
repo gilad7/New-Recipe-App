@@ -29,6 +29,7 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
     ListView listView;
     SingleRecipeAdapter adapter;
     private List<Recipe> recipeList = null;
+
     String directions;
     String ingredients;
 
@@ -74,8 +75,6 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
             recipeList = new ArrayList<Recipe>();
 
 
-
-
             recipe.getLevel();
             recipe.getPrepTime();
             recipe.getTitle();
@@ -86,7 +85,6 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
             recipe.getImageFileURL();
 
             recipeList.add(recipe);
-
 
 
             return null;
