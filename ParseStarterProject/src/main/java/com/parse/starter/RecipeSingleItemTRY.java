@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.parse.ParseObject;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.URISyntaxException;
@@ -30,8 +31,8 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
     SingleRecipeAdapter adapter;
     private List<Recipe> recipeList = null;
 
-    String directions;
-    String ingredients;
+    JSONObject directions;
+    JSONObject ingredients;
 
 
     @Override
@@ -55,13 +56,57 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
         Intent intent = getIntent();
         recipe = (Recipe) intent.getSerializableExtra("recipe");
 
-        directions =  intent.getStringExtra("directions");
-        ingredients =  intent.getStringExtra("ingredients");
+        String directionsString =  intent.getStringExtra("directions");
+        String ingredientsString =  intent.getStringExtra("ingredients");
 
-        Log.i("ddd", directions);
 
-//        txtDirections.setText(directions);
-//        txtIngredients.setText(ingredients);
+        try {
+            ingredients = new JSONObject(ingredientsString);
+            directions = new JSONObject(directionsString);
+
+//            JSONArray ingredientsArray = ingredients.getJSONArray("general");
+
+
+
+//            Log.i("json", json);
+
+
+
+
+
+         /*   JSONArray array = jsonObject.getJSONArray("general");
+            int count= 0;
+                String ingredients;
+            while(count<array.length()){
+
+                JSONObject jo = array.getJSONObject(count);
+                ingredients = jo.getString("general");
+
+                Log.i("ingredients", ingredients);
+
+
+            }*/
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+/*
+        try {
+//            JSONObject jsonObject = new JSONObject(ingredients);
+//            JSONArray jsonArray = jsonObject.getJSONArray("general");
+//            JSONObject recipeJSON = (JSONObject) jsonArray.getJSONObject(0);
+//            JSONArray ja = recipeJSON.getJSONArray("general");
+
+            for(int i=0; i<jsonArray.length(); i++ ){
+                JSONObject recipe = jsonArray.getJSONObject(i);
+                Log.i("ingredients", recipe.toString());
+            }
+//            Log.i("json", jsonObject.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }*/
+        //Works
+//       Log.i("ddd", ingredients);
 
 
     }
@@ -83,7 +128,10 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
             recipe.getOverallTime();
             recipe.getImageName();
             recipe.getImageFileURL();
-
+            //not sure
+            recipe.getIngredients();
+            recipe.getDirections();
+            //not sure
             recipeList.add(recipe);
 
 
@@ -96,7 +144,7 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
             //locate list view in listview_main-activity.xmlivity.xml
             listView = (ListView)findViewById(R.id.listview);
             //pass the results to ArrayAdapter
-            adapter = new SingleRecipeAdapter(RecipeSingleItemTRY.this, recipeList);
+            adapter = new SingleRecipeAdapter(RecipeSingleItemTRY.this, recipe, ingredients, directions);
             //Bind the adapter to the listview
             listView.setAdapter(adapter);
         }

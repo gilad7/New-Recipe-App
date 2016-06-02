@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,31 +26,100 @@ public class SingleRecipeAdapter extends BaseAdapter {
     //Declare variables
     Context context;
     LayoutInflater inflater;
-    private List<Recipe> recipelist = null;
-    private ArrayList<Recipe> arrayList;
+//    private List<Recipe> recipelist = null;
+//    private ArrayList<Recipe> arrayList;
+    Recipe recipe;
 
-    String directions;
-    String ingredients;
+    JSONObject directions;
+    JSONObject ingredients;
+
+    private static final int TYPE_DETAILS = 0;
+    private static final int TYPE_TITLE = 1;
+    private static final int TYPE_INGREDIENT = 2;
+    private static final int TYPE_DIRECTION = 3;
+    private static final int TYPE_INGREDIENT_SUBTITLE = 4;
+    private static final int TYPE_DIRECTION_SUBTITLE = 5;
 
 
-    public SingleRecipeAdapter(Context context, List<Recipe> recipeslist){
+    public SingleRecipeAdapter(Context context, Recipe recipe, JSONObject ingredients, JSONObject directions){
 
         this.context = context;
-        this.recipelist = recipeslist;
+        this.recipe = recipe;
         inflater = LayoutInflater.from(context);
-        this.arrayList = new ArrayList<Recipe>();
-        this.arrayList.addAll(recipeslist);
+        this.ingredients = ingredients;
+        this.directions = directions;
+//        this.arrayList = new ArrayList<Recipe>();
+//        this.arrayList.addAll(recipeslist);
 
     }
     @Override
     public int getCount() {
-        return recipelist.size();
+        return 2;
     }
 
     @Override
     public Object getItem(int position) {
-        return recipelist.get(position);
+        return recipe;
     }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (position == 0) {
+            // Details type
+            return TYPE_DETAILS;
+        }
+        if (isIngredientsTitlePosition(position)) {
+            // ingredients title type
+            return TYPE_TITLE;
+        }
+        if (isIngredientPosition(position)) {
+            // infgredient type
+            return TYPE_INGREDIENT;
+        }
+        if (isDirectionsTitlePosition(position)) {
+            // directions title type
+            return TYPE_TITLE;
+        }
+        if (isDirectionPosition(position)) {
+            // directions title type
+            return TYPE_DIRECTION;
+        }
+            return 0;
+    }
+    
+
+    private Boolean isIngredientsTitlePosition(int position) {
+        return position == 1;
+    }
+
+    private Boolean isIngredientPosition(int position) {
+        return position >= 2 && position < getIngredientsEndPosition(position);
+    }
+
+    private int getIngredientsEndPosition (int position){
+        try {
+            return recipe.ingredients.getJSONArray("general").length() + 1;
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    private int getDirectionsTitlePosition (int position){
+        return getIngredientsEndPosition(position) + 1;
+    }
+
+    private Boolean isDirectionsTitlePosition (int position){
+        return position == getDirectionsTitlePosition(position);
+    }
+
+    private  Boolean isDirectionPosition(int position){
+
+        return position == getDirectionsTitlePosition(position) +1;
+    }
+
+
 
     @Override
     public long getItemId(int position) {
@@ -64,6 +136,7 @@ public class SingleRecipeAdapter extends BaseAdapter {
         TextView prepTime;
         TextView cookTime;
         TextView directions;
+        TextView ingredients;
     }
     @Override
     public View getView(final int position, View view, ViewGroup viewGroup) {
@@ -80,6 +153,7 @@ public class SingleRecipeAdapter extends BaseAdapter {
             holder.overallTime = (TextView) view.findViewById(R.id.overallTime);
             holder.prepTime = (TextView) view.findViewById(R.id.numberPrepTime);
             holder.cookTime = (TextView) view.findViewById(R.id.numberCookTime);
+            holder.ingredients = (TextView) view.findViewById(R.id.ingredientsText);
 //            holder.directions = (TextView) view.findViewById(R.id.directionsText);
 
             //Locate ImageView in listview_recipes-items.xmlitems.xml
@@ -89,7 +163,7 @@ public class SingleRecipeAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
 
-        final Recipe recipe = recipelist.get(position);
+//        final Recipe recipe;
         //set results in TextView
         holder.level.setText(recipe.getLevel());
         holder.title.setText(recipe.getTitle());
@@ -97,8 +171,10 @@ public class SingleRecipeAdapter extends BaseAdapter {
         holder.overallTime.setText(Integer.toString(recipe.getOverallTime()));
         holder.prepTime.setText(Integer.toString(recipe.getPrepTime()));
         holder.cookTime.setText(Integer.toString(recipe.getCookTime()));
-
+//        holder.ingredients.setText((CharSequence) recipe.getIngredients());
 //        holder.directions.setText(recipe.getDirections().toString());
+
+//        Log.i("ingredients", String.valueOf(recipe.getIngredients()));
 
 
         String imageURL = "";

@@ -20,5 +20,6 @@
     <string name="overllTimeText">זמן הכנה כולל</string>
     <string name="prepTime">זמן הכנה</string>
     <string name="cookTime">זמן בישול</string>
+    <string name="ingredients">מצרכים</string>
 
 </resources>

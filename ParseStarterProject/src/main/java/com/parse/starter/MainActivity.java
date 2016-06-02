@@ -11,6 +11,7 @@ package com.parse.starter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -23,6 +24,8 @@ import android.view.Gravity;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.joanzapata.iconify.Iconify;
+import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -38,8 +41,8 @@ import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
-  //Declare variables
 
+  //Declare variables
   ListView listView;
   List<ParseObject> ob;
   ProgressDialog mProgressDialog;
@@ -110,12 +113,8 @@ public class MainActivity extends AppCompatActivity {
           recipe.setCookTime((Integer) parseRecipe.get("cookTime"));
           recipe.setPrepTime((Integer) parseRecipe.get("prepTime"));
 
-//          JSONObject directions = (JSONObject) parseRecipe.get("directions");
-//          Log.i("Json", directions.toString());
-        // recipe.setDirections(parseRecipe.getJSONObject("directions"));
-         //recipe.setDirections(parseRecipe.getJSONObject("ingredients"));
-
-
+         recipe.setDirections(parseRecipe.getJSONObject("directions"));
+         recipe.setIngredients(parseRecipe.getJSONObject("ingredients"));
 
 
           String imageName = (String)parseRecipe.get("imageName");
