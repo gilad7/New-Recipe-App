@@ -1545,10 +1545,11 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c003d;
         public static final int action_mode_bar_stub=0x7f0c003c;
         public static final int action_mode_close_button=0x7f0c0025;
-        public static final int action_settings=0x7f0c006e;
+        public static final int action_settings=0x7f0c006f;
         public static final int activity_chooser_view_content=0x7f0c0026;
         public static final int alertTitle=0x7f0c0030;
         public static final int always=0x7f0c0016;
+        public static final int amount=0x7f0c006b;
         public static final int beginning=0x7f0c0013;
         public static final int buttonPanel=0x7f0c0036;
         public static final int cancel_action=0x7f0c0051;
@@ -1562,7 +1563,7 @@ containing a value of this type.
         public static final int decor_content_parent=0x7f0c003e;
         public static final int default_activity_button=0x7f0c0029;
         public static final int dialog=0x7f0c001b;
-        public static final int directionsText=0x7f0c006b;
+        public static final int directionsText=0x7f0c006e;
         public static final int disableHome=0x7f0c000c;
         public static final int dropdown=0x7f0c001c;
         public static final int edit_query=0x7f0c0042;
@@ -1577,9 +1578,8 @@ containing a value of this type.
         public static final int ifRoom=0x7f0c0018;
         public static final int image=0x7f0c0028;
         public static final int info=0x7f0c005b;
-        public static final int ingredients=0x7f0c006d;
-        public static final int ingredientsFont=0x7f0c006c;
-        public static final int ingredientsText=0x7f0c006a;
+        public static final int ingredientText=0x7f0c006c;
+        public static final int ingredientsText=0x7f0c006d;
         public static final int level=0x7f0c005f;
         public static final int levellabel=0x7f0c005e;
         public static final int line1=0x7f0c0055;
@@ -1633,6 +1633,7 @@ containing a value of this type.
         public static final int time=0x7f0c0056;
         public static final int timerFont=0x7f0c0064;
         public static final int title=0x7f0c002c;
+        public static final int titleTextView=0x7f0c006a;
         public static final int title_template=0x7f0c002f;
         public static final int topPanel=0x7f0c002e;
         public static final int type=0x7f0c0061;
@@ -1691,10 +1692,12 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f040026;
         public static final int select_dialog_singlechoice_material=0x7f040027;
         public static final int single_item_try_adapter=0x7f040028;
-        public static final int singleitemview=0x7f040029;
-        public static final int singleitemview2try=0x7f04002a;
-        public static final int support_simple_spinner_dropdown_item=0x7f04002b;
-        public static final int test_single=0x7f04002c;
+        public static final int single_recipe_data_title=0x7f040029;
+        public static final int single_recipe_ingredient=0x7f04002a;
+        public static final int singleitemview=0x7f04002b;
+        public static final int singleitemview2try=0x7f04002c;
+        public static final int support_simple_spinner_dropdown_item=0x7f04002d;
+        public static final int test_single=0x7f04002e;
     }
     public static final class menu {
         public static final int menu_main=0x7f0d0000;

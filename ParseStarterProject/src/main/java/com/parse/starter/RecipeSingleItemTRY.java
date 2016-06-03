@@ -129,8 +129,8 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
             recipe.getImageName();
             recipe.getImageFileURL();
             //not sure
-            recipe.getIngredients();
-            recipe.getDirections();
+//            recipe.getIngredients();
+//            recipe.getDirections();
             //not sure
             recipeList.add(recipe);
 

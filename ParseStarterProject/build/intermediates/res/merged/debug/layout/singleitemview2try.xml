@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#fafafa">
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <RelativeLayout
         android:orientation="horizontal"
@@ -177,40 +176,6 @@
             android:layout_below="@+id/cookTime"
             android:layout_alignRight="@+id/cookTime"
             android:layout_alignEnd="@+id/cookTime" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text=""
-        android:id="@+id/ingredientsFont"
-        android:layout_below="@+id/numberPrepTime"
-        android:layout_toLeftOf="@+id/timerFont"
-        android:layout_toStartOf="@+id/timerFont"
-        android:layout_marginTop="23dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/ingredients"
-        android:id="@+id/ingredients"
-        android:layout_alignTop="@+id/ingredientsFont"
-        android:layout_toLeftOf="@+id/ingredientsFont"
-        android:layout_toStartOf="@+id/numberPrepTime"
-        android:layout_marginRight="25dp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text=""
-        android:id="@+id/ingredientsText"
-        android:layout_below="@+id/ingredients"
-        android:layout_toLeftOf="@+id/numberPrepTime"
-        android:layout_toStartOf="@+id/numberPrepTime"
-        android:layout_marginTop="23dp" />
 
 
 </RelativeLayout>
