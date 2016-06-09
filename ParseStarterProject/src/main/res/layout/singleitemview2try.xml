@@ -6,7 +6,6 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="#F9F3F5"
         android:alpha="0.932"
         android:gravity="top">
 
@@ -132,6 +131,7 @@
             android:layout_toStartOf="@+id/timerFont"
             android:layout_marginEnd="25dp"
             android:layout_marginTop="8dp"
+            android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
 
         <TextView

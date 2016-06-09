@@ -21,5 +21,6 @@
     <string name="prepTime">זמן הכנה</string>
     <string name="cookTime">זמן בישול</string>
     <string name="ingredients">מצרכים</string>
+    <string name="directions">שלבי הכנה</string>
 
 </resources>

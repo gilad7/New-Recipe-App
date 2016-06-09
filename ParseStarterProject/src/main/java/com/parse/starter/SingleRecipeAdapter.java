@@ -56,10 +56,14 @@ public class SingleRecipeAdapter extends BaseAdapter {
     @Override
     public int getCount() {
 
+        int ret = 1 + 1 + getIngredientsCount() + 1 + getDirectionsCount();
+//        Log.i("myTag count", String.valueOf(ret));
+        return ret;
+    }
 
-        return 1 + 1 + getIngredientsCount()
-//                + 1 + getDirectionsCount()
-                ;
+    @Override
+    public int getViewTypeCount() {
+        return 4;
     }
 
     @Override
@@ -69,6 +73,7 @@ public class SingleRecipeAdapter extends BaseAdapter {
 
     @Override
     public int getItemViewType(int position) {
+      //  Log.i("myTag Type position", String.valueOf(position));
         if (position == 0) {
             // Details type
             return TYPE_DETAILS;
@@ -89,6 +94,9 @@ public class SingleRecipeAdapter extends BaseAdapter {
             // directions type
             return TYPE_DIRECTION;
         }
+
+        Log.i("myTag WARNING", "myTag WARNING");
+
             return 0;
     }
 
@@ -109,25 +117,38 @@ public class SingleRecipeAdapter extends BaseAdapter {
         TextView overallTime;
         TextView prepTime;
         TextView cookTime;
-        
+
         // data title
         TextView dataTitle;
 
         //ingredients section
         TextView ingredientText;
         TextView ingredientAmount;
+
+        //direction section
+        TextView directionText;
+        TextView directionAmount;
     }
+
+    @Override
+    public boolean isEnabled(int position) {
+        return false;
+    }
+
     @Override
     public View getView(final int position, View view, ViewGroup viewGroup) {
-        final ViewHolder holder;
+
+      //  Log.i("myTag view position", String.valueOf(position));
+       final ViewHolder holder;
         int type = getItemViewType(position);
+
         if(view == null){
 
             holder = new ViewHolder();
             switch (type) {
                 case TYPE_DETAILS:
                     view = inflater.inflate(R.layout.singleitemview2try, null);
-                    //Locate TextViews in listview_recipes_itemspes-items.xml
+                    //Locate TextViews in singlitemview2try.xml
                     holder.image = (ImageView) view.findViewById(R.id.image);
                     holder.title = (TextView) view.findViewById(R.id.title);
                     holder.level = (TextView) view.findViewById(R.id.level);
@@ -141,12 +162,19 @@ public class SingleRecipeAdapter extends BaseAdapter {
                     if(isIngredientsTitlePosition(position)){
                         holder.dataTitle = (TextView)view.findViewById(R.id.titleTextView);
                     }
+                    if(isDirectionsTitlePosition(position)){
+                        holder.dataTitle = (TextView)view.findViewById(R.id.titleTextView);
+                    }
                     break;
                 case TYPE_INGREDIENT:
                     view = inflater.inflate(R.layout.single_recipe_ingredient, null);
-                    holder.ingredientAmount = (TextView)view.findViewById(R.id.amount);
+                    holder.ingredientAmount = (TextView)view.findViewById(R.id.ingredientAmount);
                     holder.ingredientText = (TextView)view.findViewById(R.id.ingredientText);
-
+                    break;
+                case TYPE_DIRECTION:
+                    view = inflater.inflate(R.layout.single_recipe_direction, null);
+                    holder.directionAmount = (TextView) view.findViewById(R.id.directionAmount);
+                    holder.directionText = (TextView) view.findViewById(R.id.directionText);
                     break;
                 default:
                     break;
@@ -168,46 +196,40 @@ public class SingleRecipeAdapter extends BaseAdapter {
                 holder.overallTime.setText(Integer.toString(recipe.getOverallTime()));
                 holder.prepTime.setText(Integer.toString(recipe.getPrepTime()));
                 holder.cookTime.setText(Integer.toString(recipe.getCookTime()));
-
-
+                //Set image
                 String imageURL = "";
 
                 if(recipe.getImageName() == null){
-
                     imageURL = recipe.getImageFileURL();
-
                 }else {
 
                     imageURL = "https://googledrive.com/host/0B1tVd-X6T988bE1yUDdJa0FMRTQ/"+recipe.getImageName();
-
-
                 }
-
                 Picasso.with(context).load(imageURL).fit().centerCrop().into(holder.image);
-
-
                 break;
-            case TYPE_TITLE:
 
+            case TYPE_TITLE:
+                //set both titles ingredients and directions
                 if(isIngredientsTitlePosition(position)){
                     holder.dataTitle.setText(context.getString(R.string.ingredients));
                 }
+                if(isDirectionsTitlePosition(position)){
+                    holder.dataTitle.setText(context.getString(R.string.directions));
+                }
                 break;
+
             case TYPE_INGREDIENT:
                 int ingredientIndex = position - 2;
+//                Log.i("myTag index ingredients", String.valueOf(ingredientIndex));
                 try {
                     String ingText = ingredients.getJSONArray("general").get(ingredientIndex).toString();
 
-                    Log.i("ingredients", ingText);
-
-
+//                    Log.i("myTag ingTXT", ingText);
 
                     Pattern p = Pattern.compile("(\\d+)?\\|(.+)");
                     Matcher m = p.matcher(ingText);
                     if (m.matches()) {
 
-                        Log.i("ingredients 1", m.group(1));
-                        Log.i("ingredients 2", m.group(2));
                         holder.ingredientText.setText(m.group(2));
                         holder.ingredientAmount.setText(m.group(1));
                     }
@@ -216,8 +238,22 @@ public class SingleRecipeAdapter extends BaseAdapter {
                     e.printStackTrace();
                 }
 
-
                 break;
+
+            case TYPE_DIRECTION:
+                    int directionIndex = position - 2 - getIngredientsEndPosition();
+
+                    try {
+                        String dirText = directions.getJSONArray("general").get(directionIndex).toString();
+
+                        holder.directionAmount.setText(String.valueOf(directionIndex + 1));
+                        holder.directionText.setText(dirText);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                break;
+
             default:
                 break;
 
@@ -248,15 +284,19 @@ public class SingleRecipeAdapter extends BaseAdapter {
         return position == getDirectionsTitlePosition();
     }
 
-    private  Boolean isDirectionPosition(int position){
+    private Boolean isDirectionPosition(int position){
 
-        return position == getDirectionsTitlePosition() +1;
+
+        return position >= getDirectionsTitlePosition() + 1 &&
+               position <= getDirectionsCount() + getDirectionsTitlePosition();
     }
 
     private int getIngredientsCount (){
-
         try {
-            return ingredients.getJSONArray("general").length();
+            int ret = ingredients.getJSONArray("general").length();
+
+
+            return  ret;
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -264,9 +304,12 @@ public class SingleRecipeAdapter extends BaseAdapter {
     }
 
     private int getDirectionsCount (){
-
         try {
-            return directions.getJSONArray("general").length();
+            int ret =  directions.getJSONArray("general").length();
+
+          //  Log.i("Tag dir", String.valueOf(ret));
+
+            return ret;
         } catch (JSONException e) {
             e.printStackTrace();
         }

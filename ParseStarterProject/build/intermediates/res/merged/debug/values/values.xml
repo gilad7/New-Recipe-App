@@ -200,6 +200,7 @@
     <eat-comment/>
     <string name="app_name">מתכונים</string>
     <string name="cookTime">זמן בישול</string>
+    <string name="directions">שלבי הכנה</string>
     <string name="ingredients">מצרכים</string>
     <string name="levellabel">:level</string>
     <string name="menu_settings">Settings</string>

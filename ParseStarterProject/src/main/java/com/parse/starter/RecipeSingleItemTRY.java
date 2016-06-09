@@ -40,7 +40,6 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview_single_item_new);
 
-
         //Make the App in Hebrew
         String languageToLoad  = "he";
         Locale locale = new Locale(languageToLoad);
@@ -51,7 +50,7 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
                 getBaseContext().getResources().getDisplayMetrics());
         this.setContentView(R.layout.listview_single_item_new);
 
-       new  RemoteDataTask().execute();
+//       new  RemoteDataTask().execute();
 
         Intent intent = getIntent();
         recipe = (Recipe) intent.getSerializableExtra("recipe");
@@ -64,90 +63,19 @@ public class RecipeSingleItemTRY extends AppCompatActivity {
             ingredients = new JSONObject(ingredientsString);
             directions = new JSONObject(directionsString);
 
-//            JSONArray ingredientsArray = ingredients.getJSONArray("general");
-
-
-
-//            Log.i("json", json);
-
-
-
-
-
-         /*   JSONArray array = jsonObject.getJSONArray("general");
-            int count= 0;
-                String ingredients;
-            while(count<array.length()){
-
-                JSONObject jo = array.getJSONObject(count);
-                ingredients = jo.getString("general");
-
-                Log.i("ingredients", ingredients);
-
-
-            }*/
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-/*
-        try {
-//            JSONObject jsonObject = new JSONObject(ingredients);
-//            JSONArray jsonArray = jsonObject.getJSONArray("general");
-//            JSONObject recipeJSON = (JSONObject) jsonArray.getJSONObject(0);
-//            JSONArray ja = recipeJSON.getJSONArray("general");
-
-            for(int i=0; i<jsonArray.length(); i++ ){
-                JSONObject recipe = jsonArray.getJSONObject(i);
-                Log.i("ingredients", recipe.toString());
-            }
-//            Log.i("json", jsonObject.toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
-        //Works
-//       Log.i("ddd", ingredients);
+        //locate list view in listview_main-activity.xmlivity.xml
+        listView = (ListView)findViewById(R.id.listview);
+        //pass the results to ArrayAdapter
+        adapter = new SingleRecipeAdapter(RecipeSingleItemTRY.this, recipe, ingredients, directions);
+        //Bind the adapter to the listview
+        listView.setAdapter(adapter);
 
 
-    }
 
-
-    class RemoteDataTask extends AsyncTask<Void, Void, Void> {
-
-        @Override
-        protected Void doInBackground(Void... params) {
-
-            recipeList = new ArrayList<Recipe>();
-
-
-            recipe.getLevel();
-            recipe.getPrepTime();
-            recipe.getTitle();
-            recipe.getType();
-            recipe.getCookTime();
-            recipe.getOverallTime();
-            recipe.getImageName();
-            recipe.getImageFileURL();
-            //not sure
-//            recipe.getIngredients();
-//            recipe.getDirections();
-            //not sure
-            recipeList.add(recipe);
-
-
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-            //super.onPostExecute(result);
-            //locate list view in listview_main-activity.xmlivity.xml
-            listView = (ListView)findViewById(R.id.listview);
-            //pass the results to ArrayAdapter
-            adapter = new SingleRecipeAdapter(RecipeSingleItemTRY.this, recipe, ingredients, directions);
-            //Bind the adapter to the listview
-            listView.setAdapter(adapter);
-        }
     }
 
 

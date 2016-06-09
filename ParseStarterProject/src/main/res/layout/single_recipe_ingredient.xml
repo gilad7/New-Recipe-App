@@ -6,23 +6,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="200"
-        android:id="@+id/amount"
+        android:text="88"
+        android:id="@+id/ingredientAmount"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
         android:layout_marginRight="43dp"
         android:textStyle="bold"
-        android:textSize="20dp"/>
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
+        android:text="helo"
         android:id="@+id/ingredientText"
-
-        android:layout_centerHorizontal="true"
-        android:layout_alignBottom="@+id/amount" />
+        android:layout_toStartOf="@+id/ingredientAmount"
+        android:layout_marginRight="23dp"
+        android:layout_alignBottom="@+id/ingredientAmount" />
 </RelativeLayout>
