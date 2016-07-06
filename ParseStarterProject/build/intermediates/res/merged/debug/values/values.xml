@@ -201,6 +201,11 @@
     <string name="app_name">מתכונים</string>
     <string name="cookTime">זמן בישול</string>
     <string name="directions">שלבי הכנה</string>
+    <!-- From: file:/D:/Work%20Space/Recipes%20New/ParseStarterProject/src/main/res/values/icons.xml -->
+    <eat-comment/>
+    <string name="fa_shopping_basket"></string>
+    <!-- From: file:/D:/Work%20Space/Recipes%20New/ParseStarterProject/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="ingredients">מצרכים</string>
     <string name="levellabel">:level</string>
     <string name="menu_settings">Settings</string>

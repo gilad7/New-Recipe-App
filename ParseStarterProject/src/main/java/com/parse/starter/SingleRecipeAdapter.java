@@ -2,6 +2,7 @@ package com.parse.starter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -120,6 +121,7 @@ public class SingleRecipeAdapter extends BaseAdapter {
 
         // data title
         TextView dataTitle;
+        TextView dataIcon;
 
         //ingredients section
         TextView ingredientText;
@@ -159,12 +161,12 @@ public class SingleRecipeAdapter extends BaseAdapter {
                     break;
                 case TYPE_TITLE:
                     view = inflater.inflate(R.layout.single_recipe_data_title, null);
-                    if(isIngredientsTitlePosition(position)){
-                        holder.dataTitle = (TextView)view.findViewById(R.id.titleTextView);
-                    }
-                    if(isDirectionsTitlePosition(position)){
-                        holder.dataTitle = (TextView)view.findViewById(R.id.titleTextView);
-                    }
+
+                    holder.dataTitle = (TextView)view.findViewById(R.id.titleTextView);
+                    Typeface iconFont = FontManager.getTypeface(context, FontManager.FONTAWESOME);
+                    FontManager.markAsIconContainer(view.findViewById(R.id.icons_container), iconFont);
+                    holder.dataIcon = (TextView)view.findViewById(R.id.icon);
+
                     break;
                 case TYPE_INGREDIENT:
                     view = inflater.inflate(R.layout.single_recipe_ingredient, null);
@@ -172,7 +174,9 @@ public class SingleRecipeAdapter extends BaseAdapter {
                     holder.ingredientText = (TextView)view.findViewById(R.id.ingredientText);
                     break;
                 case TYPE_DIRECTION:
-                    view = inflater.inflate(R.layout.single_recipe_direction, null);
+                    /////
+                    view = inflater.inflate(R.layout.single_recipe_direction, viewGroup, false);
+                    ////
                     holder.directionAmount = (TextView) view.findViewById(R.id.directionAmount);
                     holder.directionText = (TextView) view.findViewById(R.id.directionText);
                     break;
@@ -212,6 +216,8 @@ public class SingleRecipeAdapter extends BaseAdapter {
                 //set both titles ingredients and directions
                 if(isIngredientsTitlePosition(position)){
                     holder.dataTitle.setText(context.getString(R.string.ingredients));
+
+//                    holder.dataIcon.setText(context.getString(R.string.fa_shopping_basket));
                 }
                 if(isDirectionsTitlePosition(position)){
                     holder.dataTitle.setText(context.getString(R.string.directions));
@@ -245,6 +251,8 @@ public class SingleRecipeAdapter extends BaseAdapter {
 
                     try {
                         String dirText = directions.getJSONArray("general").get(directionIndex).toString();
+
+                        Log.i("DIRECTION", dirText);
 
                         holder.directionAmount.setText(String.valueOf(directionIndex + 1));
                         holder.directionText.setText(dirText);
