@@ -445,8 +445,8 @@ int id customPanel 0x7f0c0034
 int id decor_content_parent 0x7f0c003e
 int id default_activity_button 0x7f0c0029
 int id dialog 0x7f0c001b
-int id directionAmount 0x7f0c006c
-int id directionText 0x7f0c006d
+int id directionAmount 0x7f0c006d
+int id directionText 0x7f0c006c
 int id directionsText 0x7f0c0071
 int id disableHome 0x7f0c000c
 int id dropdown 0x7f0c001c

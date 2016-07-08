@@ -176,9 +176,18 @@ public class SingleRecipeAdapter extends BaseAdapter {
                 case TYPE_DIRECTION:
                     /////
                     view = inflater.inflate(R.layout.single_recipe_direction, viewGroup, false);
+
+//                    // Get the Layout Parameters for ListView Current Item View
+//                    ViewGroup.LayoutParams params = view.getLayoutParams();
+//
+//                    // Set the height of the Item View
+//                    params.height = 250;
+//                    view.setLayoutParams(params);
                     ////
                     holder.directionAmount = (TextView) view.findViewById(R.id.directionAmount);
                     holder.directionText = (TextView) view.findViewById(R.id.directionText);
+
+
                     break;
                 default:
                     break;

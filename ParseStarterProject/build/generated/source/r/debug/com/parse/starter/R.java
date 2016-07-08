@@ -1562,8 +1562,8 @@ containing a value of this type.
         public static final int decor_content_parent=0x7f0c003e;
         public static final int default_activity_button=0x7f0c0029;
         public static final int dialog=0x7f0c001b;
-        public static final int directionAmount=0x7f0c006c;
-        public static final int directionText=0x7f0c006d;
+        public static final int directionAmount=0x7f0c006d;
+        public static final int directionText=0x7f0c006c;
         public static final int directionsText=0x7f0c0071;
         public static final int disableHome=0x7f0c000c;
         public static final int dropdown=0x7f0c001c;
