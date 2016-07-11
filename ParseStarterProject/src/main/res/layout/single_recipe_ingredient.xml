@@ -6,23 +6,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="88"
-        android:id="@+id/ingredientAmount"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
+        android:layout_weight="1"
+        android:id="@+id/ingredientText"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="92dp"
+        android:gravity="fill_vertical"
+        android:paddingBottom="8dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="43dp"
-        android:textStyle="bold"
-        android:textSize="24dp" />
+        android:text="going homre"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="helo"
-        android:id="@+id/ingredientText"
-        android:layout_toStartOf="@+id/ingredientAmount"
-        android:layout_marginRight="23dp"
-        android:layout_alignBottom="@+id/ingredientAmount" />
+        android:text="10"
+        android:id="@+id/ingredientAmount"
+        android:layout_marginRight="40dp"
+        android:textStyle="bold"
+        android:textSize="21dp"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignTop="@+id/ingredientText" />
+
 </RelativeLayout>
