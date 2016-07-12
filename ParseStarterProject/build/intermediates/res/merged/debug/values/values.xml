@@ -199,13 +199,21 @@
     <!-- From: file:/D:/Work%20Space/Recipes%20New/ParseStarterProject/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">מתכונים</string>
+    <string name="basket"></string>
     <string name="cookTime">זמן בישול</string>
     <string name="directions">שלבי הכנה</string>
-    <!-- From: file:/D:/Work%20Space/Recipes%20New/ParseStarterProject/src/main/res/values/icons.xml -->
+    <!-- From: file:/D:/Work%20Space/Recipes%20New/ParseStarterProject/src/main/res/values/font_awesome.xml -->
     <eat-comment/>
-    <string name="fa_shopping_basket"></string>
+    <string name="fa_adjust"></string>
+    <string name="fa_adn"></string>
+    <string name="fa_align_center"></string>
+    <string name="fa_align_justify"></string>
+    <string name="fa_align_left"></string>
+    <string name="fa_align_right"></string>
+    <string name="fa_ambulance"></string>
     <!-- From: file:/D:/Work%20Space/Recipes%20New/ParseStarterProject/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="file"></string>
     <string name="ingredients">מצרכים</string>
     <string name="levellabel">:level</string>
     <string name="menu_settings">Settings</string>

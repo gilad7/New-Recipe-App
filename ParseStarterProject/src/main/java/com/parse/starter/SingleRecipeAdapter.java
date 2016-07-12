@@ -1,9 +1,9 @@
 package com.parse.starter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +16,6 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,6 +30,8 @@ public class SingleRecipeAdapter extends BaseAdapter {
     JSONObject directions;
     JSONObject ingredients;
 
+    Typeface dataTitleIcon;
+
     private LayoutInflater inflater;
 
     private static final int TYPE_DETAILS = 0;
@@ -43,13 +42,16 @@ public class SingleRecipeAdapter extends BaseAdapter {
     private static final int TYPE_DIRECTION_SUBTITLE = 5;
 
 
-    public SingleRecipeAdapter(Context context, Recipe recipe, JSONObject ingredients, JSONObject directions){
+
+
+    public SingleRecipeAdapter(Context context, Recipe recipe, JSONObject ingredients, JSONObject directions, Typeface dataTitleIcon){
 
         this.context = context;
         this.recipe = recipe;
         inflater = LayoutInflater.from(context);
         this.ingredients = ingredients;
         this.directions = directions;
+        this.dataTitleIcon = dataTitleIcon;
 
     }
 
@@ -96,7 +98,7 @@ public class SingleRecipeAdapter extends BaseAdapter {
             return TYPE_DIRECTION;
         }
 
-        Log.i("myTag WARNING", "myTag WARNING");
+//        Log.i("myTag WARNING", "myTag WARNING");
 
             return 0;
     }
@@ -161,11 +163,10 @@ public class SingleRecipeAdapter extends BaseAdapter {
                     break;
                 case TYPE_TITLE:
                     view = inflater.inflate(R.layout.single_recipe_data_title, null);
-
                     holder.dataTitle = (TextView)view.findViewById(R.id.titleTextView);
-                    Typeface iconFont = FontManager.getTypeface(context, FontManager.FONTAWESOME);
-                    FontManager.markAsIconContainer(view.findViewById(R.id.icons_container), iconFont);
                     holder.dataIcon = (TextView)view.findViewById(R.id.icon);
+
+
 
                     break;
                 case TYPE_INGREDIENT:
@@ -174,19 +175,10 @@ public class SingleRecipeAdapter extends BaseAdapter {
                     holder.ingredientText = (TextView)view.findViewById(R.id.ingredientText);
                     break;
                 case TYPE_DIRECTION:
-                    /////
                     view = inflater.inflate(R.layout.single_recipe_direction, viewGroup, false);
 
-//                    // Get the Layout Parameters for ListView Current Item View
-//                    ViewGroup.LayoutParams params = view.getLayoutParams();
-//
-//                    // Set the height of the Item View
-//                    params.height = 250;
-//                    view.setLayoutParams(params);
-                    ////
                     holder.directionAmount = (TextView) view.findViewById(R.id.directionAmount);
                     holder.directionText = (TextView) view.findViewById(R.id.directionText);
-
 
                     break;
                 default:
@@ -225,11 +217,16 @@ public class SingleRecipeAdapter extends BaseAdapter {
                 //set both titles ingredients and directions
                 if(isIngredientsTitlePosition(position)){
                     holder.dataTitle.setText(context.getString(R.string.ingredients));
-
-//                    holder.dataIcon.setText(context.getString(R.string.fa_shopping_basket));
+                    //
+                    String ingredientsText = context.getString(R.string.basket);
+                    holder.dataIcon.setText(ingredientsText);
+                    holder.dataIcon.setTypeface(dataTitleIcon);
                 }
                 if(isDirectionsTitlePosition(position)){
                     holder.dataTitle.setText(context.getString(R.string.directions));
+                    String directionsText = context.getString(R.string.file);
+                    holder.dataIcon.setText(directionsText);
+                    holder.dataIcon.setTypeface(dataTitleIcon);
                 }
                 break;
 

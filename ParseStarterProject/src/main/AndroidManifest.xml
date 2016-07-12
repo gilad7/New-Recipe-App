@@ -44,10 +44,6 @@
             android:label="@string/app_name"
             android:configChanges="locale">
         </activity>
-        <activity android:name=".RecipeSingleItemTRY"
-            android:label="@string/app_name"
-            android:configChanges="locale">
-        </activity>
     </application>
 
 </manifest>

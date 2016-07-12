@@ -2,7 +2,6 @@ package com.parse.starter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,8 +42,7 @@ public class RecipesMainAdapter extends BaseAdapter {
         TextView type;
         TextView level;
         TextView overallTime;
-//        TextView prepTime;
-//        TextView cookTime;
+
     }
 
     @Override
@@ -109,15 +107,13 @@ public class RecipesMainAdapter extends BaseAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //send single item click data to RecipeSingleItemView Class
-//                Intent intent = new Intent(context, RecipeSingleItemView.class);
 
-                Intent intent = new Intent(context, RecipeSingleItemTRY.class);
+
+                Intent intent = new Intent(context, RecipeSingleItemView.class);
 
                 intent.putExtra("recipe", recipe);
                 intent.putExtra("directions", recipe.getDirections().toString());
                 intent.putExtra("ingredients", recipe.getIngredients().toString());
-                //Start RecipeSingleItemView.class
                 context.startActivity(intent);
 
             }

@@ -2,31 +2,33 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/icons_container">
+    android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="41dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_marginEnd="24dp"
-        android:layout_alignBottom="@+id/icon"
-        android:layout_toLeftOf="@+id/icon"
-        android:layout_toStartOf="@+id/icon"
-        android:textStyle="bold"
-        android:text="hello"
-        android:id="@+id/titleTextView" />
+        android:layout_weight="1"
+        android:id="@+id/titleTextView"
+        android:layout_marginTop="9dp"
+        android:gravity="fill_vertical"
+        android:paddingBottom="8dp"
+        android:layout_alignParentEnd="true"
+        android:text="going homre"
+        android:layout_marginEnd="41dp"/>
+
+
 
     <TextView
         android:id="@+id/icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fa_shopping_basket"
-        android:gravity="center"
+        android:text=""
+        android:gravity="right"
         android:layout_weight="1"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="18dp"
+        android:layout_marginRight="15dp"
         android:layout_marginTop="15dp"
         android:typeface="normal" />
 </RelativeLayout>

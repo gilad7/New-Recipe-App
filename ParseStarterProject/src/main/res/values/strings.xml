@@ -22,5 +22,7 @@
     <string name="cookTime">זמן בישול</string>
     <string name="ingredients">מצרכים</string>
     <string name="directions">שלבי הכנה</string>
+    <string name="basket">&#xf291;</string>
+    <string name="file">&#xf0f6;</string>
 
 </resources>

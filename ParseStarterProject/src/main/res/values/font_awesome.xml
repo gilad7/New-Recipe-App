@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="fa_adjust">&#xf042;</string>
+    <string name="fa_adn">&#xf170;</string>
+    <string name="fa_align_center">&#xf037;</string>
+    <string name="fa_align_justify">&#xf039;</string>
+    <string name="fa_align_left">&#xf036;</string>
+    <string name="fa_align_right">&#xf038;</string>
+    <string name="fa_ambulance">&#xf0f9;</string>
+
+</resources>
