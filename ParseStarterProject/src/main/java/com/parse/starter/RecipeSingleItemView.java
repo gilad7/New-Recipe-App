@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -23,6 +25,7 @@ public class RecipeSingleItemView extends AppCompatActivity {
     ListView listView;
     SingleRecipeAdapter adapter;
     private List<Recipe> recipeList = null;
+    static Typeface dataTitleIcon;
 
     JSONObject directions;
     JSONObject ingredients;
@@ -32,6 +35,10 @@ public class RecipeSingleItemView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview_single_item_new);
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.actionbar_single_item);
 
         //Make the App in Hebrew
         String languageToLoad  = "he";
@@ -43,7 +50,28 @@ public class RecipeSingleItemView extends AppCompatActivity {
                 getBaseContext().getResources().getDisplayMetrics());
         this.setContentView(R.layout.listview_single_item_new);
 
-        Typeface dataTitleIcon = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+        //Set Typeface
+        dataTitleIcon = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+
+        TextView iconAbout = (TextView)findViewById(R.id.iconAbout);
+        String info = getBaseContext().getString(R.string.info);
+        iconAbout.setTypeface(dataTitleIcon);
+        iconAbout.setText(info);
+
+        TextView iconRecipes = (TextView)findViewById(R.id.iconRecipes);
+        String recipes = getBaseContext().getString(R.string.recipes);
+        iconRecipes.setTypeface(dataTitleIcon);
+        iconRecipes.setText(recipes);
+
+        TextView iconFavorites = (TextView)findViewById(R.id.iconFavorites);
+        String favorites = getBaseContext().getString(R.string.favorites);
+        iconFavorites.setTypeface(dataTitleIcon);
+        iconFavorites.setText(favorites);
+
+        TextView iconCategories = (TextView)findViewById(R.id.iconCategories);
+        String categories = getBaseContext().getString(R.string.categories);
+        iconCategories.setTypeface(dataTitleIcon);
+        iconCategories.setText(categories);
 
         Intent intent = getIntent();
         recipe = (Recipe) intent.getSerializableExtra("recipe");
@@ -63,12 +91,21 @@ public class RecipeSingleItemView extends AppCompatActivity {
         //locate list view in listview_main-activity.xmlivity.xml
         listView = (ListView)findViewById(R.id.listview);
         //pass the results to ArrayAdapter
-        adapter = new SingleRecipeAdapter(RecipeSingleItemView.this, recipe, ingredients, directions, dataTitleIcon);
+        adapter = new SingleRecipeAdapter(RecipeSingleItemView.this, recipe, ingredients, directions);
         //Bind the adapter to the listview
         listView.setAdapter(adapter);
 
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
 
+        if (id == android.R.id.home) {
+            onBackPressed();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 

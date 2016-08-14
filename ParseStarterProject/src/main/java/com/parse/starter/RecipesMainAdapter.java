@@ -75,7 +75,9 @@ public class RecipesMainAdapter extends BaseAdapter {
             holder.overallTime = (TextView) view.findViewById(R.id.overallTime);
             //Locate ImageView in listview_recipes-items.xmlitems.xml
             holder.image = (ImageView) view.findViewById(R.id.image);
+
             view.setTag(holder);
+
         }else{
             holder = (ViewHolder) view.getTag();
         }
@@ -86,8 +88,7 @@ public class RecipesMainAdapter extends BaseAdapter {
         holder.title.setText(recipe.getTitle());
         holder.type.setText(recipe.getType());
         holder.overallTime.setText(Integer.toString(recipe.getOverallTime()));
-        //set results into ImageView
-        //imageLoader.DisplayImage(recipeslist.get(position).getImage(), holder.image);
+
 
 
         String imageURL = "";
@@ -108,7 +109,6 @@ public class RecipesMainAdapter extends BaseAdapter {
             @Override
             public void onClick(View view) {
 
-
                 Intent intent = new Intent(context, RecipeSingleItemView.class);
 
                 intent.putExtra("recipe", recipe);
@@ -119,7 +119,9 @@ public class RecipesMainAdapter extends BaseAdapter {
             }
         });
 
-
         return view;
     }
+
+
+
 }

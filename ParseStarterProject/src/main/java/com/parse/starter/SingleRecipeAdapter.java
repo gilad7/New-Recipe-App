@@ -3,7 +3,6 @@ package com.parse.starter;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,8 +29,6 @@ public class SingleRecipeAdapter extends BaseAdapter {
     JSONObject directions;
     JSONObject ingredients;
 
-    Typeface dataTitleIcon;
-
     private LayoutInflater inflater;
 
     private static final int TYPE_DETAILS = 0;
@@ -44,14 +41,13 @@ public class SingleRecipeAdapter extends BaseAdapter {
 
 
 
-    public SingleRecipeAdapter(Context context, Recipe recipe, JSONObject ingredients, JSONObject directions, Typeface dataTitleIcon){
+    public SingleRecipeAdapter(Context context, Recipe recipe, JSONObject ingredients, JSONObject directions){
 
         this.context = context;
         this.recipe = recipe;
         inflater = LayoutInflater.from(context);
         this.ingredients = ingredients;
         this.directions = directions;
-        this.dataTitleIcon = dataTitleIcon;
 
     }
 
@@ -60,7 +56,7 @@ public class SingleRecipeAdapter extends BaseAdapter {
     public int getCount() {
 
         int ret = 1 + 1 + getIngredientsCount() + 1 + getDirectionsCount();
-//        Log.i("myTag count", String.valueOf(ret));
+
         return ret;
     }
 
@@ -76,7 +72,6 @@ public class SingleRecipeAdapter extends BaseAdapter {
 
     @Override
     public int getItemViewType(int position) {
-      //  Log.i("myTag Type position", String.valueOf(position));
         if (position == 0) {
             // Details type
             return TYPE_DETAILS;
@@ -97,8 +92,6 @@ public class SingleRecipeAdapter extends BaseAdapter {
             // directions type
             return TYPE_DIRECTION;
         }
-
-//        Log.i("myTag WARNING", "myTag WARNING");
 
             return 0;
     }
@@ -142,7 +135,6 @@ public class SingleRecipeAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View view, ViewGroup viewGroup) {
 
-      //  Log.i("myTag view position", String.valueOf(position));
        final ViewHolder holder;
         int type = getItemViewType(position);
 
@@ -151,7 +143,7 @@ public class SingleRecipeAdapter extends BaseAdapter {
             holder = new ViewHolder();
             switch (type) {
                 case TYPE_DETAILS:
-                    view = inflater.inflate(R.layout.singleitemview2try, null);
+                    view = inflater.inflate(R.layout.single_item_view_adapter, null);
                     //Locate TextViews in singlitemview2try.xml
                     holder.image = (ImageView) view.findViewById(R.id.image);
                     holder.title = (TextView) view.findViewById(R.id.title);
@@ -163,14 +155,13 @@ public class SingleRecipeAdapter extends BaseAdapter {
                     break;
                 case TYPE_TITLE:
                     view = inflater.inflate(R.layout.single_recipe_data_title, null);
+
                     holder.dataTitle = (TextView)view.findViewById(R.id.titleTextView);
                     holder.dataIcon = (TextView)view.findViewById(R.id.icon);
-
-
-
                     break;
                 case TYPE_INGREDIENT:
                     view = inflater.inflate(R.layout.single_recipe_ingredient, null);
+
                     holder.ingredientAmount = (TextView)view.findViewById(R.id.ingredientAmount);
                     holder.ingredientText = (TextView)view.findViewById(R.id.ingredientText);
                     break;
@@ -214,29 +205,29 @@ public class SingleRecipeAdapter extends BaseAdapter {
                 break;
 
             case TYPE_TITLE:
-                //set both titles ingredients and directions
+                //set both titles ingredients and directions icons and strings
                 if(isIngredientsTitlePosition(position)){
+
                     holder.dataTitle.setText(context.getString(R.string.ingredients));
-                    //
                     String ingredientsText = context.getString(R.string.basket);
+                    Log.i("basket", ingredientsText);
                     holder.dataIcon.setText(ingredientsText);
-                    holder.dataIcon.setTypeface(dataTitleIcon);
+                    holder.dataIcon.setTypeface(RecipeSingleItemView.dataTitleIcon);
                 }
                 if(isDirectionsTitlePosition(position)){
+
                     holder.dataTitle.setText(context.getString(R.string.directions));
                     String directionsText = context.getString(R.string.file);
                     holder.dataIcon.setText(directionsText);
-                    holder.dataIcon.setTypeface(dataTitleIcon);
+                    holder.dataIcon.setTypeface(RecipeSingleItemView.dataTitleIcon);
                 }
                 break;
 
             case TYPE_INGREDIENT:
+                //Set ingredients
                 int ingredientIndex = position - 2;
-//                Log.i("myTag index ingredients", String.valueOf(ingredientIndex));
                 try {
                     String ingText = ingredients.getJSONArray("general").get(ingredientIndex).toString();
-
-//                    Log.i("myTag ingTXT", ingText);
 
                     Pattern p = Pattern.compile("(\\d+)?\\|(.+)");
                     Matcher m = p.matcher(ingText);
@@ -253,12 +244,11 @@ public class SingleRecipeAdapter extends BaseAdapter {
                 break;
 
             case TYPE_DIRECTION:
+                //Set direction
                     int directionIndex = position - 2 - getIngredientsEndPosition();
 
                     try {
                         String dirText = directions.getJSONArray("general").get(directionIndex).toString();
-
-                        Log.i("DIRECTION", dirText);
 
                         holder.directionAmount.setText(String.valueOf(directionIndex + 1));
                         holder.directionText.setText(dirText);
@@ -320,8 +310,6 @@ public class SingleRecipeAdapter extends BaseAdapter {
     private int getDirectionsCount (){
         try {
             int ret =  directions.getJSONArray("general").length();
-
-          //  Log.i("Tag dir", String.valueOf(ret));
 
             return ret;
         } catch (JSONException e) {
