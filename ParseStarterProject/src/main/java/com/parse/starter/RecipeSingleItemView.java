@@ -53,25 +53,27 @@ public class RecipeSingleItemView extends AppCompatActivity {
         //Set Typeface
         dataTitleIcon = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
 
-        TextView iconAbout = (TextView)findViewById(R.id.iconAbout);
-        String info = getBaseContext().getString(R.string.info);
-        iconAbout.setTypeface(dataTitleIcon);
-        iconAbout.setText(info);
-
-        TextView iconRecipes = (TextView)findViewById(R.id.iconRecipes);
-        String recipes = getBaseContext().getString(R.string.recipes);
-        iconRecipes.setTypeface(dataTitleIcon);
-        iconRecipes.setText(recipes);
-
-        TextView iconFavorites = (TextView)findViewById(R.id.iconFavorites);
-        String favorites = getBaseContext().getString(R.string.favorites);
-        iconFavorites.setTypeface(dataTitleIcon);
-        iconFavorites.setText(favorites);
-
-        TextView iconCategories = (TextView)findViewById(R.id.iconCategories);
-        String categories = getBaseContext().getString(R.string.categories);
-        iconCategories.setTypeface(dataTitleIcon);
-        iconCategories.setText(categories);
+        // setting tabs to navigate between activities
+//        TextView iconAbout = (TextView)findViewById(R.id.iconAbout);
+//        String info = getBaseContext().getString(R.string.info);
+//        iconAbout.setTypeface(dataTitleIcon);
+//        iconAbout.setText(info);
+//
+//        TextView iconRecipes = (TextView)findViewById(R.id.iconRecipes);
+//        String recipes = getBaseContext().getString(R.string.recipes);
+//        iconRecipes.setTypeface(dataTitleIcon);
+//        iconRecipes.setText(recipes);
+//
+//        TextView iconFavorites = (TextView)findViewById(R.id.iconFavorites);
+//        String favorites = getBaseContext().getString(R.string.favorites);
+//        iconFavorites.setTypeface(dataTitleIcon);
+//        iconFavorites.setText(favorites);
+//
+//        TextView iconCategories = (TextView)findViewById(R.id.iconCategories);
+//        String categories = getBaseContext().getString(R.string.categories);
+//        iconCategories.setTypeface(dataTitleIcon);
+//        iconCategories.setText(categories);
+        //////////////////////
 
         Intent intent = getIntent();
         recipe = (Recipe) intent.getSerializableExtra("recipe");

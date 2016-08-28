@@ -55,24 +55,16 @@ public class MainRecipesView extends AppCompatActivity {
     getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
     getSupportActionBar().setCustomView(R.layout.actionbar_main);
 
-    //Set search icon onClick
-    ImageView searchMain = (ImageView)findViewById(R.id.searchImage);
-//    searchMain.setOnClickListener(new View.OnClickListener() {
-//      @Override
-//      public void onClick(View v) {
-//
-//      }
-//    });
 
-    //set typeface
-    optionIcon = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
-    //Options Icons
-    TextView iconAbout;
-    iconAbout = (TextView)findViewById(R.id.iconAbout);
-    String infoIcon = getApplicationContext().getString(R.string.info);
-    Log.i("Context string", infoIcon);
-    iconAbout.setText(infoIcon);
-    iconAbout.setTypeface(optionIcon);
+//    //set typeface
+//    optionIcon = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+//    //Options Icons
+//    TextView iconAbout;
+//    iconAbout = (TextView)findViewById(R.id.iconAbout);
+//    String infoIcon = getApplicationContext().getString(R.string.info);
+//    Log.i("Context string", infoIcon);
+//    iconAbout.setText(infoIcon);
+//    iconAbout.setTypeface(optionIcon);
 
 
     // Execute RemoteDataTask AsyncTask

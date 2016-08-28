@@ -9,18 +9,18 @@
         <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-5baad6a8e10eb879f9ca68d22272175da393d645.jar" />
     </item>
     <item
-        jar="D:\Programs\SDK\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
-        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-204e77002271b87657849fa20668504650e0e82c.jar" />
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-edf50244bf7da07a429576a96c509bfef427e8a2.jar" />
     </item>
     <item
-        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify-fontawesome\2.2.2\jars\classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-9491678e3ac1cf61dd7cbd52835d74bf3159f529.jar" />
+        sha1="af20faf2a6fff6cac01bb9ee4130ee942a29ec22">
+        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-81ccf7be2762161dc2acf6bde8e8424a30bbccd4.jar" />
     </item>
     <item
         jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify\2.2.2\jars\classes.jar"
@@ -30,11 +30,18 @@
         <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-679248769784cdb41488df9e463aa28fa1d30bd6.jar" />
     </item>
     <item
-        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify-fontawesome\2.2.2\jars\classes.jar"
+        jar="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="af20faf2a6fff6cac01bb9ee4130ee942a29ec22">
-        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-81ccf7be2762161dc2acf6bde8e8424a30bbccd4.jar" />
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-9491678e3ac1cf61dd7cbd52835d74bf3159f529.jar" />
+    </item>
+    <item
+        jar="D:\Programs\SDK\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="D:\Work Space\Recipes New\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-204e77002271b87657849fa20668504650e0e82c.jar" />
     </item>
 
 </items>
