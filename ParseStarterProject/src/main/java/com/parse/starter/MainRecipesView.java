@@ -14,6 +14,8 @@ import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -45,26 +47,22 @@ public class MainRecipesView extends AppCompatActivity {
   static Typeface optionIcon;
 
 
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
-    //Get the view from listview_main-activity.xmlivity.xml
+    //Get the view from listview_main_activity.xml
     setContentView(R.layout.listview_main_activity);
 
     getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
     getSupportActionBar().setCustomView(R.layout.actionbar_main);
 
 
-//    //set typeface
-//    optionIcon = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
-//    //Options Icons
-//    TextView iconAbout;
-//    iconAbout = (TextView)findViewById(R.id.iconAbout);
-//    String infoIcon = getApplicationContext().getString(R.string.info);
-//    Log.i("Context string", infoIcon);
-//    iconAbout.setText(infoIcon);
-//    iconAbout.setTypeface(optionIcon);
+    //set typeface
+    // icons
+    optionIcon = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+    //fonts
+    optionIcon = Typeface.createFromAsset(getAssets(), "fonts/hillelclm-medium-webfont.ttf");
 
 
     // Execute RemoteDataTask AsyncTask

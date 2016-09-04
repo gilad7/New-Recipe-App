@@ -12,8 +12,8 @@
 
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="23" />
+    android:minSdkVersion="11"
+    android:targetSdkVersion="23" />
 
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -29,9 +29,8 @@
         android:theme="@style/AppTheme">
 
 
-
         <activity
-            android:name=".MainRecipesView"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:configChanges="locale">
             <!--android:theme="@android:style/Theme.Black.NoTitleBar">-->

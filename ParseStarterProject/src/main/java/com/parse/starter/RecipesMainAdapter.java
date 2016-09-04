@@ -2,6 +2,7 @@ package com.parse.starter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -76,6 +77,8 @@ public class RecipesMainAdapter extends BaseAdapter {
             //Locate ImageView in listview_recipes-items.xmlitems.xml
             holder.image = (ImageView) view.findViewById(R.id.image);
 
+
+
             view.setTag(holder);
 
         }else{
@@ -88,6 +91,9 @@ public class RecipesMainAdapter extends BaseAdapter {
         holder.title.setText(recipe.getTitle());
         holder.type.setText(recipe.getType());
         holder.overallTime.setText(Integer.toString(recipe.getOverallTime()));
+
+        ////
+        holder.type.setTypeface(MainRecipesView.optionIcon);
 
 
 

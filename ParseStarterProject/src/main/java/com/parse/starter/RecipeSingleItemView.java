@@ -8,7 +8,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -25,7 +24,8 @@ public class RecipeSingleItemView extends AppCompatActivity {
     ListView listView;
     SingleRecipeAdapter adapter;
     private List<Recipe> recipeList = null;
-    static Typeface dataTitleIcon;
+    static Typeface titlesIcon;
+    static Typeface optionIcon;
 
     JSONObject directions;
     JSONObject ingredients;
@@ -51,27 +51,28 @@ public class RecipeSingleItemView extends AppCompatActivity {
         this.setContentView(R.layout.listview_single_item_new);
 
         //Set Typeface
-        dataTitleIcon = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+        titlesIcon = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+        optionIcon = Typeface.createFromAsset(getAssets(), "fonts/hillelclm-medium-webfont.ttf");
 
         // setting tabs to navigate between activities
 //        TextView iconAbout = (TextView)findViewById(R.id.iconAbout);
 //        String info = getBaseContext().getString(R.string.info);
-//        iconAbout.setTypeface(dataTitleIcon);
+//        iconAbout.setTypeface(titlesIcon);
 //        iconAbout.setText(info);
 //
 //        TextView iconRecipes = (TextView)findViewById(R.id.iconRecipes);
 //        String recipes = getBaseContext().getString(R.string.recipes);
-//        iconRecipes.setTypeface(dataTitleIcon);
+//        iconRecipes.setTypeface(titlesIcon);
 //        iconRecipes.setText(recipes);
 //
 //        TextView iconFavorites = (TextView)findViewById(R.id.iconFavorites);
 //        String favorites = getBaseContext().getString(R.string.favorites);
-//        iconFavorites.setTypeface(dataTitleIcon);
+//        iconFavorites.setTypeface(titlesIcon);
 //        iconFavorites.setText(favorites);
 //
 //        TextView iconCategories = (TextView)findViewById(R.id.iconCategories);
 //        String categories = getBaseContext().getString(R.string.categories);
-//        iconCategories.setTypeface(dataTitleIcon);
+//        iconCategories.setTypeface(titlesIcon);
 //        iconCategories.setText(categories);
         //////////////////////
 

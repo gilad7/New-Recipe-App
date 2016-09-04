@@ -1,7 +1,6 @@
 package com.parse.starter;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -210,16 +209,21 @@ public class SingleRecipeAdapter extends BaseAdapter {
 
                     holder.dataTitle.setText(context.getString(R.string.ingredients));
                     String ingredientsText = context.getString(R.string.basket);
+                    ////
+                    holder.dataTitle.setTypeface(RecipeSingleItemView.optionIcon);
+                    ////
                     Log.i("basket", ingredientsText);
                     holder.dataIcon.setText(ingredientsText);
-                    holder.dataIcon.setTypeface(RecipeSingleItemView.dataTitleIcon);
+                    holder.dataIcon.setTypeface(RecipeSingleItemView.titlesIcon);
+
                 }
                 if(isDirectionsTitlePosition(position)){
 
                     holder.dataTitle.setText(context.getString(R.string.directions));
                     String directionsText = context.getString(R.string.file);
                     holder.dataIcon.setText(directionsText);
-                    holder.dataIcon.setTypeface(RecipeSingleItemView.dataTitleIcon);
+                    holder.dataIcon.setTypeface(RecipeSingleItemView.titlesIcon);
+
                 }
                 break;
 
